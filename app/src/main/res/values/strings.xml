@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SmallGames</string>
+    <string name="maintext">Vừa học vừa chơi</string>
+    <string name="card">card</string>
+    <string name="egg">egg</string>
+    <string name="chicken">chicken</string>
+    <string name="slide">slide</string>
+    <string name="fishing">fishing</string>
+</resources>
