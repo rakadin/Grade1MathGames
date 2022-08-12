@@ -15,9 +15,13 @@
         android:theme="@style/Theme.SmallGames"
         tools:targetApi="31">
         <activity
-            android:name=".Game1MainActivity"
+            android:name=".Winningactivity"
             android:exported="false"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Game1MainActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Game1"
             android:exported="false"

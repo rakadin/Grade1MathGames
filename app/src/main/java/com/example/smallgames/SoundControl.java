@@ -73,4 +73,16 @@ public class SoundControl extends AppCompatActivity {
             rollSound.start();
         }
     }
+    protected void wrongSoundFun(Activity main)
+    {
+        MediaPlayer wrong;
+        wrong = MediaPlayer.create(main,R.raw.wrong);
+        wrong.start();
+    }
+    protected void winSoundFun(Activity main)
+    {
+        MediaPlayer win;
+        win= MediaPlayer.create(main,R.raw.winning);
+        win.start();
+    }
 }
