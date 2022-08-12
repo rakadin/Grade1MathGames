@@ -3,6 +3,7 @@ package com.example.smallgames;
 import static com.example.smallgames.R.drawable.*;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.display.DisplayManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -13,54 +14,53 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
+    SoundControl soundControl = new SoundControl();
     ImageButton onoffBut;
-   MediaPlayer player;
+    ImageButton game1But;
    private boolean vali = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        soundControl.vali = true;
         setContentView(R.layout.activity_main);
         onoffBut = findViewById(R.id.SonoffBut);
-        //play sound
-            if(player == null)
-            {
-                player = MediaPlayer.create(MainActivity.this,R.raw.backgroundmusic);
-            }
-            player.start();
-            // Loop sound when play to the end
-        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer) {
-                player.start();
-            }
-        });
+        game1But = findViewById(R.id.eggcatch);
 
-        // background sound control button function
-        onoffBut.setOnClickListener(new View.OnClickListener() {
+        //onlick for game 1
+        game1But.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(vali == true)// when sound is on -> click -> off
-                {
-                    vali = false;
-                    player.pause();
-                    onoffBut.setImageResource(sound_off);
-                }
-                else// when sound is off -> click -> on
-                {
-                    vali = true;
-                    player.start();
-                    onoffBut.setImageResource(sound_on);
-                }
-
+                soundControl.PopSoundFun(MainActivity.this,game1But);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,Game1.class);
+                startActivity(intent);
+                soundControl.player.pause();
             }
         });
+        soundControl.OnOffFun(MainActivity.this,onoffBut);
+
     }
+// if restart set activity again
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        onoffBut.setImageResource(sound_on);
+        vali = true;
+        soundControl.player.start();
+    }
+// if destroy stop music
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(player != null)
+        if(soundControl.player != null)
         {
-            player.stop();
+            soundControl.player.stop();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        soundControl.player.start();
     }
 }

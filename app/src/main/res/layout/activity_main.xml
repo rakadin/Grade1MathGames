@@ -8,6 +8,7 @@
     android:background="@drawable/gradient_background"
     >
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -25,6 +26,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.186" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="104dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="68dp"
+        android:src="@drawable/spark"
+        app:layout_constraintBottom_toTopOf="@+id/eggcatch"
+        app:layout_constraintEnd_toStartOf="@+id/gifImageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/SonoffBut"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="104dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/spark"
+        app:layout_constraintEnd_toStartOf="@+id/gifImageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView2"
+        android:layout_width="104dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="64dp"
+        android:src="@drawable/spark"
+        app:layout_constraintBottom_toTopOf="@+id/slide"
+        app:layout_constraintEnd_toStartOf="@+id/gifImageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
 
     <ImageButton
         android:id="@+id/chicken"
@@ -104,6 +141,7 @@
         app:layout_constraintVertical_bias="0.413" />
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView3"
         android:layout_width="127dp"
         android:layout_height="114dp"
         android:src="@drawable/sun"
@@ -126,6 +164,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
+        android:background="@null"
         android:id="@+id/SonoffBut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
