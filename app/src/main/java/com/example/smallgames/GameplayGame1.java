@@ -28,6 +28,7 @@ public class GameplayGame1 extends AppCompatActivity {
             {
                 if(  temID == R.id.grEgg3 ||temID == R.id.grEgg4 )
                 {
+                    soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
                     imgEgg[countEggs].setImageResource(R.drawable.green_egg);
                     countEggs++;
@@ -41,6 +42,7 @@ public class GameplayGame1 extends AppCompatActivity {
             {
                 if(  temID == R.id.grEgg2 ||temID == R.id.grEgg7 || temID == R.id.yellowEgg2 || temID == R.id.redEgg1 )
                 {
+                    soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
                     if(temID == R.id.yellowEgg2)
                     {
@@ -66,6 +68,7 @@ public class GameplayGame1 extends AppCompatActivity {
             {
                 if(  temID == R.id.redEgg2 ||temID == R.id.redEgg3 ||temID == R.id.purEgg2 )
                 {
+                    soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
                     if(temID == R.id.purEgg2)
                     {
@@ -86,6 +89,7 @@ public class GameplayGame1 extends AppCompatActivity {
             {
                 if(  temID == R.id.yellowEgg1 ||temID == R.id.blueEgg2 )
                 {
+                    soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
                     if(temID == R.id.yellowEgg1)
                     {
@@ -106,6 +110,7 @@ public class GameplayGame1 extends AppCompatActivity {
             {
                 if(  temID == R.id.grEgg5 ||temID == R.id.grEgg6 ||temID == R.id.purEgg1)
                 {
+                    soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
                     if(temID == R.id.purEgg1)
                     {
@@ -126,6 +131,7 @@ public class GameplayGame1 extends AppCompatActivity {
             {
                 if(  temID == R.id.grEgg1 ||temID == R.id.blueEgg1 )
                 {
+                    soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
                     if(temID == R.id.blueEgg1)
                     {
