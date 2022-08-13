@@ -113,18 +113,21 @@ public class Game1MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg1,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         grEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg2,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         grEgg3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg3,Game1MainActivity.this);
+                winAcOpen();
 //                countNest++;
             }
         });
@@ -132,6 +135,7 @@ public class Game1MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg4,Game1MainActivity.this);
+                winAcOpen();
 //                countNest++;
             }
         });
@@ -139,6 +143,7 @@ public class Game1MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg5,Game1MainActivity.this);
+                winAcOpen();
 //                grEgg5.setBackgroundResource(R.drawable.xsign);
 //                soundControl.RollSoundFun(Game1MainActivity.this);
             }
@@ -147,66 +152,77 @@ public class Game1MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg6,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         grEgg7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg7,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         redEgg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,redEgg1,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         redEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,redEgg2,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         redEgg3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,redEgg3,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         yellowEgg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,yellowEgg1,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         yellowEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,yellowEgg2,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         purEgg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,purEgg1,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         purEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,purEgg2,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         blueEgg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,blueEgg1,Game1MainActivity.this);
+                winAcOpen();
             }
         });
         blueEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,blueEgg2,Game1MainActivity.this);
+                winAcOpen();
             }
         });
 
@@ -231,7 +247,15 @@ public class Game1MainActivity extends AppCompatActivity {
 
 
     }
-
+    // if eggs get ==6 -> open winning activity
+    protected  void winAcOpen(){
+        if(gameplayGame1.countEggs == 6)
+        {
+            Intent intent = new Intent();
+            intent.setClass(Game1MainActivity.this,Winningactivity.class);
+            startActivity(intent);
+        }
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();

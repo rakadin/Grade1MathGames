@@ -14,17 +14,27 @@ public class Winningactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_win);
+        soundControl.winSoundFun(Winningactivity.this);
         replayBut = findViewById(R.id.replayBut);
         menuBut = findViewById(R.id.menuBut);
         replayBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                soundControl.PopSoundFun(Winningactivity.this,);
-                soundControl.wrongSoundFun(Winningactivity.this);
+                soundControl.PopSoundFun2(Winningactivity.this,replayBut);
                 Intent intent = new Intent();
                 intent.setClass(Winningactivity.this,Game1MainActivity.class);
                 startActivity(intent);
 //                soundControl.player.pause();
+            }
+        });
+        menuBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                soundControl.PopSoundFun2(Winningactivity.this,replayBut);
+                Intent intent = new Intent();
+                intent.setClass(Winningactivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
     }

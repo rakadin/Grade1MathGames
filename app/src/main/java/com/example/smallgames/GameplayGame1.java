@@ -1,11 +1,18 @@
 package com.example.smallgames;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -136,15 +143,32 @@ public class GameplayGame1 extends AppCompatActivity {
                 break;
             }
         }
-        if(countEggs == 6)
-        {
-            Winningactivity winningactivity = new Winningactivity();
-            soundControl.winSoundFun(main);
-//            main.setContentView(R.layout.layout_dialog_win);
-            Intent intent = new Intent();
-            intent.setClass(main,Winningactivity.class);
 
+//        if(countEggs == 6)
+//        {
+//            Winningactivity winningactivity = new Winningactivity();
+//            soundControl.winSoundFun(main);
+//
+////
+//                AlertDialog.Builder alerDialog = new AlertDialog.Builder(main);
+//                alerDialog.setTitle("Thông báo!");
+//                alerDialog.setIcon(R.drawable.xsign);
+//                alerDialog.setMessage("Chúc mừng! Bạn đã chiến thắng");
+//                alerDialog.setPositiveButton("Chơi lại", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                    }
+//                });
+//                alerDialog.setNegativeButton("Trang chủ", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                    }
+//                });
+//
+//                alerDialog.show();
 
-        }
+//        }
     }
 }
