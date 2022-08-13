@@ -28,6 +28,7 @@ public class Game1MainActivity extends AppCompatActivity {
     ImageView imgEgg5;
     ImageView imgEgg6;
     //
+    ImageButton homeBut;
     ImageButton onoffBut;
     ImageButton diceBut;
     //* button
@@ -49,7 +50,6 @@ public class Game1MainActivity extends AppCompatActivity {
     Button blueEgg2;
     //end egg
     ImageSwitcher imageSwitcher;
-    int countNest = 0;
     int diceNumFinal ;
     //    ImageView birdnest[] = {imgEgg1,imgEgg3,imgEgg4,imgEgg5,imgEgg6,imgEgg2};//get id bird nests
     int ImageSwitcherImages[] ={R.drawable.game1_pic1};// create images for img switcher
@@ -59,6 +59,7 @@ public class Game1MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game1_main);
         imageSwitcher = findViewById(R.id.imgswt);
+        homeBut = findViewById(R.id.homeBut);
         onoffBut = findViewById(R.id.SonoffBut);
         diceBut = findViewById(R.id.dice);
         //* img egg
@@ -240,6 +241,15 @@ public class Game1MainActivity extends AppCompatActivity {
                 switcherImageView.setImageResource(ImageSwitcherImages[switcherImageLength-1]);
                 //switcherImageView.setMaxHeight(100);
                 return switcherImageView;
+            }
+        });
+        homeBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                soundControl.PopSoundFun(Game1MainActivity.this,homeBut);
+                Intent intent = new Intent();
+                intent.setClass(Game1MainActivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
         imageSwitcher.setImageResource(ImageSwitcherImages[switcherImageLength-1]);

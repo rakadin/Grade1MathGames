@@ -79,6 +79,12 @@ public class SoundControl extends AppCompatActivity {
         wrong = MediaPlayer.create(main,R.raw.wrong);
         wrong.start();
     }
+    protected void correctSoundFun(Activity main)
+    {
+        MediaPlayer correct;
+        correct = MediaPlayer.create(main,R.raw.correct);
+        correct.start();
+    }
     protected void winSoundFun(Activity main)
     {
         MediaPlayer win;
