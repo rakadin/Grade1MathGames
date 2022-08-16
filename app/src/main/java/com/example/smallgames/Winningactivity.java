@@ -23,7 +23,7 @@ public class Winningactivity extends AppCompatActivity {
 //                soundControl.PopSoundFun(Winningactivity.this,);
                 soundControl.PopSoundFun2(Winningactivity.this,replayBut);
                 Intent intent = new Intent();
-                intent.setClass(Winningactivity.this,Game1MainActivity.class);
+                intent.setClass(Winningactivity.this, Game1MainActivity.class);
                 startActivity(intent);
 //                soundControl.player.pause();
             }

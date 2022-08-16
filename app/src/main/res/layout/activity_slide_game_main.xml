@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Slide_game_main"
+    android:background="@drawable/gradient_background_game2">
+
+    <TextView
+        android:id="@+id/game2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Cầu thang - Cầu trượt"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/game2_pic_"
+        android:layout_width="262dp"
+        android:layout_height="277dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:clickable="false"
+        android:src="@drawable/game2_pic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game2_name"
+        app:layout_constraintVertical_bias="0.542"></ImageView>
+
+    <TableLayout
+        android:layout_width="262dp"
+        android:layout_height="277dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game2_name"
+        app:layout_constraintVertical_bias="0.61">
+    <TableRow>
+        <ImageView
+            android:id="@+id/img26"
+            android:layout_width="56dp"
+            android:layout_height="45dp"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/img27"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/img28"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/img29"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/img30"
+            android:layout_width="56dp"
+            android:layout_height="45dp"
+            android:background="@null" />
+    </TableRow>
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/img25"
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img24"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img23"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img22"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img21"
+                android:layout_width="56dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+        </TableRow>
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/img16"
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img17"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img18"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img19"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img20"
+                android:layout_width="56dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+        </TableRow>
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/img15"
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img14"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img13"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img12"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_width="56dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+        </TableRow>
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img10"
+                android:layout_width="56dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+        </TableRow>
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="56dp"
+                android:layout_height="45dp"
+                android:background="@null" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textTop1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Xúc xắc nào!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/dice_game2"
+        android:layout_width="155dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="70dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/dice_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTop1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription,InvalidId,NotSibling" />
+
+    <Button
+        android:id="@+id/startMove"
+        android:layout_width="137dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Di chuyển"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkAns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toEndOf="@+id/textInput"
+        app:layout_constraintTop_toBottomOf="@+id/tetView9"
+        app:layout_constraintVertical_bias="0.695" />
+
+    <Button
+        android:id="@+id/checkAns"
+        android:layout_width="132dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="Kiểm tra"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toEndOf="@+id/textInput"
+        app:layout_constraintTop_toBottomOf="@+id/tetView9"
+        app:layout_constraintVertical_bias="0.853" />
+
+    <ImageButton
+        android:id="@+id/SonoffBut_game2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:contentDescription="@string/tablemain"
+        android:src="@drawable/sound_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.011" />
+
+    <TextView
+
+        android:id="@+id/tetView8"
+        android:layout_width="87dp"
+        android:layout_height="36dp"
+        android:text=" Câu hỏi"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toEndOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/game2_name"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:textSize="60sp"
+        android:id="@+id/questionText"
+        android:layout_width="130dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toEndOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/tetView8"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <TextView
+        android:id="@+id/tetView9"
+        android:layout_width="140dp"
+        android:layout_height="38dp"
+        android:text="   Nhập đáp án "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toEndOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/textInput"
+        android:layout_width="168dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toEndOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/tetView9"
+        app:layout_constraintVertical_bias="0.49" />
+</android.support.constraint.ConstraintLayout>

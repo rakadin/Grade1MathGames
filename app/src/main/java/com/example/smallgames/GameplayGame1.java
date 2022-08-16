@@ -16,6 +16,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.smallgames.R;
+import com.example.smallgames.SoundControl;
+
 public class GameplayGame1 extends AppCompatActivity {
     protected int countEggs =0;
     SoundControl soundControl = new SoundControl();

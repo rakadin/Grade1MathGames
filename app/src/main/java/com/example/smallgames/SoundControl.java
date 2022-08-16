@@ -91,4 +91,10 @@ public class SoundControl extends AppCompatActivity {
         win= MediaPlayer.create(main,R.raw.winning);
         win.start();
     }
+    protected void runSoundFun(Activity main)
+    {
+        MediaPlayer run;
+        run= MediaPlayer.create(main,R.raw.running);
+        run.start();
+    }
 }

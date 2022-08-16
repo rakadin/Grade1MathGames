@@ -8,10 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.ViewSwitcher;
-
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Game1MainActivity extends AppCompatActivity {
     Button replayBut;
@@ -129,7 +126,6 @@ public class Game1MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg3,Game1MainActivity.this);
                 winAcOpen();
-//                countNest++;
             }
         });
         grEgg4.setOnClickListener(new View.OnClickListener() {
@@ -137,7 +133,7 @@ public class Game1MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg4,Game1MainActivity.this);
                 winAcOpen();
-//                countNest++;
+
             }
         });
         grEgg5.setOnClickListener(new View.OnClickListener() {
@@ -145,8 +141,6 @@ public class Game1MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg5,Game1MainActivity.this);
                 winAcOpen();
-//                grEgg5.setBackgroundResource(R.drawable.xsign);
-//                soundControl.RollSoundFun(Game1MainActivity.this);
             }
         });
         grEgg6.setOnClickListener(new View.OnClickListener() {
@@ -227,12 +221,8 @@ public class Game1MainActivity extends AppCompatActivity {
             }
         });
 
-//        int finalegg = gameplayGame1.countEggs;
-//        if(finalegg == 6){
-//            Intent intent = new Intent();
-//            intent.setClass(Game1MainActivity.this,Winningactivity.class);
-//            startActivity(intent);
-//        }
+// end clicking the eggs
+        // make view for image switcher
         imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
             public View makeView() {
@@ -248,7 +238,7 @@ public class Game1MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 soundControl.PopSoundFun(Game1MainActivity.this,homeBut);
                 Intent intent = new Intent();
-                intent.setClass(Game1MainActivity.this,MainActivity.class);
+                intent.setClass(Game1MainActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -262,7 +252,7 @@ public class Game1MainActivity extends AppCompatActivity {
         if(gameplayGame1.countEggs == 6)
         {
             Intent intent = new Intent();
-            intent.setClass(Game1MainActivity.this,Winningactivity.class);
+            intent.setClass(Game1MainActivity.this, Winningactivity.class);
             startActivity(intent);
         }
     }

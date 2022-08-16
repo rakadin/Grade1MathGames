@@ -30,7 +30,7 @@
         android:layout_height="273dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         android:clickable="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +47,8 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-44dp">
+        tools:layout_editor_absoluteX="-114dp"
+        tools:layout_editor_absoluteY="-63dp">
 
         <Button
             android:id="@+id/yellowEgg1"
@@ -187,7 +187,7 @@
             app:layout_constraintHorizontal_bias="0.245"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.048"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -201,7 +201,7 @@
             app:layout_constraintHorizontal_bias="0.351"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.048"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -278,24 +278,26 @@
             android:id="@+id/textTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:text="Xúc xắc nào!"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.79"
+            app:layout_constraintHorizontal_bias="0.785"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.098"
             tools:ignore="HardcodedText" />
 
         <ImageButton
             android:id="@+id/dice"
             android:layout_width="155dp"
             android:layout_height="132dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="172dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="70dp"
             android:adjustViewBounds="true"
             android:background="@null"
             android:padding="20dp"
@@ -303,10 +305,10 @@
             android:src="@drawable/dice_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.807"
+            app:layout_constraintHorizontal_bias="0.733"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTop"
-            app:layout_constraintVertical_bias="0.142"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="ContentDescription,InvalidId,NotSibling" />
 
         <ImageButton
@@ -326,63 +328,66 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.01" />
 
+        <TableRow
+            android:id="@+id/table1"
+            android:layout_width="360dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dice"
+            app:layout_constraintVertical_bias="0.576">
+
+            <ImageView
+                android:id="@+id/ans1"
+                android:layout_width="60dp"
+                android:layout_height="52dp"
+                android:background="@drawable/birdnest"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/ans3"
+                android:layout_width="60dp"
+                android:layout_height="52dp"
+                android:background="@drawable/birdnest"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/ans4"
+                android:layout_width="60dp"
+                android:layout_height="52dp"
+                android:background="@drawable/birdnest"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/ans5"
+                android:layout_width="60dp"
+                android:layout_height="52dp"
+                android:background="@drawable/birdnest"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/ans6"
+                android:layout_width="60dp"
+                android:layout_height="52dp"
+                android:background="@drawable/birdnest"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/ans2"
+                android:layout_width="60dp"
+                android:layout_height="52dp"
+                android:background="@drawable/birdnest"
+                tools:ignore="ContentDescription" />
+
+        </TableRow>
+
 
     </android.support.constraint.ConstraintLayout>
-
-    <TableRow
-        android:id="@+id/table1"
-        android:layout_width="360dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77">
-
-        <ImageView
-            android:background="@drawable/birdnest"
-            android:id="@+id/ans1"
-            android:layout_width="60dp"
-            android:layout_height="52dp"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:background="@drawable/birdnest"
-            android:id="@+id/ans3"
-            android:layout_width="60dp"
-            android:layout_height="52dp"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:background="@drawable/birdnest"
-            android:id="@+id/ans4"
-            android:layout_width="60dp"
-            android:layout_height="52dp"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:background="@drawable/birdnest"
-            android:id="@+id/ans5"
-            android:layout_width="60dp"
-            android:layout_height="52dp"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:background="@drawable/birdnest"
-            android:id="@+id/ans6"
-            android:layout_width="60dp"
-            android:layout_height="52dp"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:background="@drawable/birdnest"
-            android:id="@+id/ans2"
-            android:layout_width="60dp"
-            android:layout_height="52dp"
-            tools:ignore="ContentDescription" />
-
-    </TableRow>
 
     <ImageButton
         android:id="@+id/SonoffBut"

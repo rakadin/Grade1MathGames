@@ -7,25 +7,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Game1 extends AppCompatActivity {
+public class Slide_introduction extends AppCompatActivity {
     ImageButton onoffBut;
     SoundControl soundControl = new SoundControl();
     Button game1But;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game1);
-        onoffBut = findViewById(R.id.SonoffBut);
-        game1But = findViewById(R.id.nextBut);
-        soundControl.OnOffFun(Game1.this,onoffBut);
+        setContentView(R.layout.activity_slide_introduction);
+        onoffBut = findViewById(R.id.SonoffBut2);
+        game1But = findViewById(R.id.nextBut2);
+        soundControl.OnOffFun(Slide_introduction.this,onoffBut);
 
         // next game 1 main activity function
         game1But.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soundControl.PopSoundFun2(Game1.this,game1But);
+                soundControl.PopSoundFun2(Slide_introduction.this,game1But);
                 Intent intent = new Intent();
-                intent.setClass(Game1.this, Game1MainActivity.class);
+                intent.setClass(Slide_introduction.this , Slide_game_main.class);
                 startActivity(intent);
                 soundControl.player.pause();
             }
