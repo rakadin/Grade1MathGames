@@ -12,6 +12,13 @@ import android.widget.ImageButton;
 
 public class SoundControl extends AppCompatActivity {
     MediaPlayer player;
+    MediaPlayer up;
+    MediaPlayer fall;
+    MediaPlayer run;
+    MediaPlayer win;
+    MediaPlayer correct;
+    MediaPlayer wrong;
+
     MediaPlayer popSound;
     MediaPlayer rollSound;
     protected boolean vali = true;
@@ -75,26 +82,53 @@ public class SoundControl extends AppCompatActivity {
     }
     protected void wrongSoundFun(Activity main)
     {
-        MediaPlayer wrong;
+
         wrong = MediaPlayer.create(main,R.raw.wrong);
         wrong.start();
     }
     protected void correctSoundFun(Activity main)
     {
-        MediaPlayer correct;
+
         correct = MediaPlayer.create(main,R.raw.correct);
         correct.start();
     }
     protected void winSoundFun(Activity main)
     {
-        MediaPlayer win;
+
         win= MediaPlayer.create(main,R.raw.winning);
         win.start();
     }
     protected void runSoundFun(Activity main)
     {
-        MediaPlayer run;
         run= MediaPlayer.create(main,R.raw.running);
         run.start();
+    }
+    protected void runSoundStopFun(Activity main)
+    {
+
+        run= MediaPlayer.create(main,R.raw.running);
+        run.stop();
+    }
+
+    protected void upSoundFun(Activity main)
+    {
+        up= MediaPlayer.create(main,R.raw.upstair);
+        up.start();
+    }
+    protected void upSoundStopFun(Activity main)
+    {
+        up= MediaPlayer.create(main,R.raw.upstair);
+        up.stop();
+    }
+
+    protected void fallSoundFun(Activity main)
+    {
+        fall= MediaPlayer.create(main,R.raw.fall);
+        fall.start();
+    }
+    protected void fallSoundStopFun(Activity main)
+    {
+        fall= MediaPlayer.create(main,R.raw.fall);
+        fall.stop();
     }
 }

@@ -1,9 +1,11 @@
 package com.example.smallgames;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import java.util.concurrent.TimeUnit;
 
 public class Slide_game_main extends AppCompatActivity {
+    int temmove =0;
     int diceNumFinal = 0;
     ImageButton onoffBut;
     ImageButton diceBut;
@@ -52,10 +55,10 @@ public class Slide_game_main extends AppCompatActivity {
     ImageView img29;
     ImageView img30;
 
-//    ImageView table[] = {img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30};
+    ImageView table[] = {img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20,img21,img22,img23,img24,img25,img26,img27,img28,img29,img30};
     //create counting move
     int move = 0;
-    TextInputEditText txtInput;
+    TextView txtInput;
 
 
     @Override
@@ -70,6 +73,9 @@ public class Slide_game_main extends AppCompatActivity {
         //animation set
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.animation_to_left);
         Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.animation_to_right);
+        Animation animation3 = AnimationUtils.loadAnimation(this, R.anim.animation_go_up_left);
+        Animation animation4 = AnimationUtils.loadAnimation(this, R.anim.anim_go_up_left_2);
+        Animation animation5 = AnimationUtils.loadAnimation(this, R.anim.anim_down_right);
         // get image view id for character
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
@@ -117,18 +123,26 @@ public class Slide_game_main extends AppCompatActivity {
                         diceNumFinal = (int) (Math.random() * 6 + 1);
                         question.setText(" "+diceNumFinal);
                         diceBut.setImageResource(images[diceNumFinal-1]);
+                        // release roll sound
+                        soundControl.rollSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                mediaPlayer.release();
+                            }
+                        });
                     });
                 }
 
             }
 
         });
+
         // end roll
         // controll character movement
         moveBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int temmove = move + diceNumFinal;
+                temmove = temmove + diceNumFinal;
                 txtInput.setText(" "+temmove);
                 if(temmove > 29)
                 {
@@ -145,37 +159,213 @@ public class Slide_game_main extends AppCompatActivity {
                 }
                 else if( temmove <29)
                 {
+                    table[0].setImageResource(0);
                     for (int i = move+1;i<=temmove+1;i++)
                     {
                         if( (i>=1 && i<=5) || (i>=11 && i<=15) ||(i>=21 && i<=25))
                         {
-                            table[i-1].startAnimation(animation);
-                            table[i-1].setImageResource(R.drawable.mario);
-                            table[i-1].setImageResource(0);
-                            if(i==temmove+1){
+                            table[i-1].setImageResource(0); // important bcs delete all old move pic
+                            table[3].setImageResource(0);//delete pic from previous lader move
+                            table[12].setImageResource(0);//delete pic from previous lader move
+                            table[14].setImageResource(0);//delete pic from previous lader move
+                            table[23].setImageResource(0);//delete pic from previous lader move
+                            table[18].setImageResource(0);//delete pic from previous slide move
+                            table[9].setImageResource(0);//delete pic from previous slide move
+                            table[27].setImageResource(0);//delete pic from previous slide move
+                            table[16].setImageResource(0);//delete pic from previous slide move
+                            if(i==temmove+1)
+                            {
                                 soundControl.runSoundFun(Slide_game_main.this);
-                                table[i-1].setImageResource(R.drawable.mario);
+                                int previousmove = i -2;
+                                // release fall sound
+                                soundControl.run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                    @Override
+                                    public void onCompletion(MediaPlayer mediaPlayer) {
+                                        mediaPlayer.release();
+                                    }
+                                });
+                                // when character go to lader -> go up
+                                if(temmove==3)
+                                {
+                                    table[i-1].setImageResource(R.drawable.mario);
+                                    table[i-1].startAnimation(animation);
+                                    table[i-2].setImageResource(0);
+//                                    table[i-1].startAnimation(animation4);
+                                    temmove +=11;
+                                    move+=(11);
+                                    int sec = 6;
+                                    int finalTemmove = temmove;
+                                    Utils.delay(sec, () -> {
+                                        table[previousmove+1].setImageResource(0);
+                                        table[previousmove].setImageResource(0);
+                                        soundControl.upSoundFun(Slide_game_main.this);
+                                        table[finalTemmove].setImageResource(R.drawable.mario);
+                                        table[finalTemmove].startAnimation(animation3);
+                                        // release up sound
+                                        soundControl.up.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                            @Override
+                                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                                mediaPlayer.release();
+                                            }
+                                        });
+                                    });
+
+                                }
+                                if(temmove==12)
+                                {
+                                    table[i-1].setImageResource(R.drawable.mario);
+                                    table[i-1].startAnimation(animation);
+                                    table[i-2].setImageResource(0);
+//                                    table[i-1].startAnimation(animation4);
+                                    temmove+=11;
+                                    move+=(11);
+                                    int sec = 6;
+                                    int finalTemmove = temmove;
+                                    Utils.delay(sec, () -> {
+                                        table[previousmove+1].setImageResource(0);
+                                        table[previousmove].setImageResource(0);
+                                        soundControl.upSoundFun(Slide_game_main.this);
+                                        table[finalTemmove].setImageResource(R.drawable.mario);
+                                        table[finalTemmove].startAnimation(animation3);
+                                        // release up sound
+                                        soundControl.up.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                            @Override
+                                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                                mediaPlayer.release();
+                                            }
+                                        });
+                                    });
+
+                                }
+                                else
+                                {
+                                    soundControl.runSoundFun(Slide_game_main.this);
+                                    table[i-1].startAnimation(animation);
+                                    table[i-1].setImageResource(R.drawable.mario);
+                                    table[i-2].setImageResource(0); // important bcs delete all old move pic
+                                    move+=diceNumFinal;
+                                    // release run sound
+                                    soundControl.run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                        @Override
+                                        public void onCompletion(MediaPlayer mediaPlayer) {
+                                            mediaPlayer.release();
+                                        }
+                                    });
+                                }
                             }
+
                         }
                         else if( (i>=6 && i<=10) || (i>=16 && i<=20) ||(i>=25 && i<=30))
                         {
-
-                            table[i-1].startAnimation(animation2);
-                            table[i-1].setImageResource(R.drawable.mario2);
-                            table[i-1].setImageResource(0);
+                            table[i-1].setImageResource(0); // important bcs delete all old move pic
+                            table[3].setImageResource(0);//delete pic from previous lader move
+                            table[12].setImageResource(0);//delete pic from previous lader move
+                            table[14].setImageResource(0);//delete pic from previous lader move
+                            table[23].setImageResource(0);//delete pic from previous lader move
+//                            table[18].setImageResource(0);//delete pic from previous slide move
+//                            table[9].setImageResource(0);//delete pic from previous slide move
+//                            table[27].setImageResource(0);//delete pic from previous slide move
+//                            table[16].setImageResource(0);//delete pic from previous slide move
                             if(i==temmove+1){
                                 soundControl.runSoundFun(Slide_game_main.this);
-                                table[i-1].setImageResource(R.drawable.mario2);
+                                int previousmove = i-2;
+                                // when character go to slide -> go down
+                                if(temmove==18)
+                                {
+                                    table[i-1].setImageResource(R.drawable.mario2);
+                                    table[i-1].startAnimation(animation4);
+                                    table[i-2].setImageResource(0);
+//                                    table[i-1].startAnimation(animation4);
+                                    temmove -=9;
+                                    move-=(9);
+                                    int sec = 4;
+                                    int finalTemmove = temmove;
+                                    Utils.delay(sec, () -> {
+                                        table[previousmove+1].setImageResource(0);
+                                        table[previousmove].setImageResource(0);
+                                        soundControl.fallSoundFun(Slide_game_main.this);
+                                        table[finalTemmove].setImageResource(R.drawable.mario2);
+                                        table[finalTemmove].startAnimation(animation4);
+                                        // release fall sound
+                                        soundControl.fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                            @Override
+                                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                                mediaPlayer.release();
+                                            }
+                                        });
+                                    });
+
+                                }
+                                if(temmove==27)
+                                {
+                                    table[i-1].setImageResource(R.drawable.mario2);
+                                    table[i-1].startAnimation(animation4);
+                                    table[i-2].setImageResource(0);
+//                                    table[i-1].startAnimation(animation4);
+                                    temmove -=11;
+                                    move-=(11);
+                                    int sec = 4;
+                                    int finalTemmove = temmove;
+                                    Utils.delay(sec, () -> {
+                                        table[previousmove+1].setImageResource(0);
+                                        table[previousmove].setImageResource(0);
+                                        soundControl.fallSoundFun(Slide_game_main.this);
+                                        table[finalTemmove].setImageResource(R.drawable.mario);
+                                        table[finalTemmove].startAnimation(animation5);
+                                        // release fall sound
+                                        soundControl.fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                            @Override
+                                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                                mediaPlayer.release();
+                                            }
+                                        });
+                                    });
+
+                                }
+                                else
+                                {
+
+                                    soundControl.runSoundFun(Slide_game_main.this);
+                                    table[i-1].startAnimation(animation2);
+                                    table[i-1].setImageResource(R.drawable.mario2);
+                                    table[move-1].setImageResource(0); // important bcs delete all old move pic
+                                    move+=diceNumFinal;
+                                    // release sound data
+                                    soundControl.player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                        @Override
+                                        public void onCompletion(MediaPlayer mediaPlayer) {
+                                            mediaPlayer.release();
+                                        }
+                                    });
+                                }
                             }
                         }
 
                     }
                 }
-                move+=diceNumFinal;
+
             }
         });
         // control sound button
         soundControl.OnOffFun(Slide_game_main.this,onoffBut);
         // end controll sound but
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        soundControl.player.stop();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        soundControl.player.start();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        soundControl.player.stop();
     }
 }
