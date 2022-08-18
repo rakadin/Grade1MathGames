@@ -8,7 +8,10 @@
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/drawable/gradient_background.xml" value="0.256" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/drawable/gradient_background_game2.xml" value="0.2785" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/drawable/gradient_background_game3.xml" value="0.189" />
+        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/drawable/gradient_card_game.xml" value="0.2545" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/drawable/gradient_game1.xml" value="0.2055" />
+        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_card_game_introduction.xml" value="0.275" />
+        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_card_game_main.xml" value="0.4" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_fishing_game_main.xml" value="0.264" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_fishing_introduction.xml" value="0.264" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_game1.xml" value="0.264" />

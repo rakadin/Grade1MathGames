@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Card_game_main"
+    android:background="@drawable/gradient_card_game">
+    <ImageButton
+        android:id="@+id/SonoffBut_game2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:contentDescription="@string/tablemain"
+        android:src="@drawable/sound_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.011" />
+    <ImageButton
+        android:id="@+id/homeBut"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:contentDescription="@string/tablemain"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+    <TextView
+        android:id="@+id/game2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Lật thẻ"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/textTop1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Xúc xắc nào!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.412"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.172"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/dice"
+        android:layout_width="170dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="70dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dice_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/textTop1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription,InvalidId,NotSibling" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="454dp"
+        android:layout_height="264dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pocker_table"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game2_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/card1"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.215" />
+
+    <ImageButton
+        android:id="@+id/card2"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <ImageButton
+        android:id="@+id/card3"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_3"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <ImageButton
+        android:id="@+id/card4"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_4"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <ImageButton
+        android:id="@+id/card5"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_5"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <ImageButton
+        android:id="@+id/card6"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_6"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <ImageButton
+        android:id="@+id/card7"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_7"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.739" />
+
+    <ImageButton
+        android:id="@+id/card8"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_8"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.739" />
+
+    <ImageButton
+        android:id="@+id/card9"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_9"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.739" />
+
+    <ImageButton
+        android:id="@+id/card10"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_10"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.739" />
+
+    <ImageButton
+        android:id="@+id/card11"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_11"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.739" />
+
+    <ImageButton
+        android:id="@+id/card12"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/card_12"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.739" />
+
+</android.support.constraint.ConstraintLayout>

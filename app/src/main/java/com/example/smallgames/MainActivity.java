@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton game1But;
     ImageButton game2But;
     ImageButton game3But;
+    ImageButton game4But;
    private boolean vali = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         game1But = findViewById(R.id.eggcatch);
         game2But = findViewById(R.id.slide);
         game3But = findViewById(R.id.fishcatch);
+        game4But = findViewById(R.id.chicken);
         //onlick for game 1
         game1But.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,9 +67,25 @@ public class MainActivity extends AppCompatActivity {
         game3But.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soundControl.PopSoundFun(MainActivity.this,game2But);
+                soundControl.PopSoundFun(MainActivity.this,game3But);
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, Fishing_introduction.class);
+                startActivity(intent);
+                soundControl.player.pause();
+                soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                    }
+                });
+            }
+        });
+        game4But.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                soundControl.PopSoundFun(MainActivity.this,game4But);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, Card_game_introduction.class);
                 startActivity(intent);
                 soundControl.player.pause();
                 soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
