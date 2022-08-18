@@ -3,6 +3,7 @@ package com.example.smallgames;
 import static com.example.smallgames.R.drawable.*;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton onoffBut;
     ImageButton game1But;
     ImageButton game2But;
+    ImageButton game3But;
    private boolean vali = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         onoffBut = findViewById(R.id.SonoffBut);
         game1But = findViewById(R.id.eggcatch);
         game2But = findViewById(R.id.slide);
+        game3But = findViewById(R.id.fishcatch);
         //onlick for game 1
         game1But.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
                 intent.setClass(MainActivity.this, Game1.class);
                 startActivity(intent);
                 soundControl.player.pause();
+                soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                    }
+                });
             }
         });
         game2But.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +54,28 @@ public class MainActivity extends AppCompatActivity {
                 intent.setClass(MainActivity.this, Slide_introduction.class);
                 startActivity(intent);
                 soundControl.player.pause();
+                soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                    }
+                });
+            }
+        });
+        game3But.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                soundControl.PopSoundFun(MainActivity.this,game2But);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, Fishing_introduction.class);
+                startActivity(intent);
+                soundControl.player.pause();
+                soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                    }
+                });
             }
         });
         soundControl.OnOffFun(MainActivity.this,onoffBut);

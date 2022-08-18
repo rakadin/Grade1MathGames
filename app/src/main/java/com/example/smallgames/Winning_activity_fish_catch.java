@@ -5,10 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-/*
-  winning archive activity -> navigate to home or play again - game 1 - eggs picking
- */
-public class Winningactivity extends AppCompatActivity {
+
+public class Winning_activity_fish_catch extends AppCompatActivity {
     Button replayBut;
     Button menuBut;
     SoundControl soundControl = new SoundControl();
@@ -16,16 +14,16 @@ public class Winningactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_win);
-        soundControl.winSoundFun(Winningactivity.this);
+        soundControl.winSoundFun(Winning_activity_fish_catch.this);
         replayBut = findViewById(R.id.replayBut);
         menuBut = findViewById(R.id.menuBut);
         replayBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                soundControl.PopSoundFun(Winningactivity.this,);
-                soundControl.PopSoundFun2(Winningactivity.this,replayBut);
+                soundControl.PopSoundFun2(Winning_activity_fish_catch.this,replayBut);
                 Intent intent = new Intent();
-                intent.setClass(Winningactivity.this, Game1MainActivity.class);
+                intent.setClass(Winning_activity_fish_catch.this, Fishing_game_main.class);
                 startActivity(intent);
 //                soundControl.player.pause();
             }
@@ -33,13 +31,14 @@ public class Winningactivity extends AppCompatActivity {
         menuBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soundControl.PopSoundFun2(Winningactivity.this,replayBut);
+                soundControl.PopSoundFun2(Winning_activity_fish_catch.this,replayBut);
                 Intent intent = new Intent();
-                intent.setClass(Winningactivity.this,MainActivity.class);
+                intent.setClass(Winning_activity_fish_catch.this,MainActivity.class);
                 startActivity(intent);
             }
         });
     }
+
     @Override
     protected void onStop() {
         super.onStop();

@@ -1,6 +1,7 @@
 package com.example.smallgames;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -101,6 +102,12 @@ public class Game1MainActivity extends AppCompatActivity {
                         soundControl.RollSoundFun(Game1MainActivity.this);
                         diceNumFinal = (int) (Math.random() * 6 + 1);
                         diceBut.setImageResource(images[diceNumFinal-1]);
+                        soundControl.rollSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                mediaPlayer.release();
+                            }
+                        });
                     }
                 });
             }

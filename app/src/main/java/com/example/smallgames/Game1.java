@@ -1,6 +1,7 @@
 package com.example.smallgames;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,12 @@ public class Game1 extends AppCompatActivity {
                 intent.setClass(Game1.this, Game1MainActivity.class);
                 startActivity(intent);
                 soundControl.player.pause();
+                soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                    }
+                });
             }
         });
     }
