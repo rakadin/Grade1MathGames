@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -37,9 +38,21 @@ public class GameplayGame1 extends AppCompatActivity {
                     butClick.setBackgroundResource(R.drawable.xsign);
                     imgEgg[countEggs].setImageResource(R.drawable.green_egg);
                     countEggs++;
+                    soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 else {
                     soundControl.wrongSoundFun(main);
+                    soundControl.wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 break;
             }
@@ -62,10 +75,21 @@ public class GameplayGame1 extends AppCompatActivity {
                         imgEgg[countEggs].setImageResource(R.drawable.green_egg);
                     }
                     countEggs++;
-
+                    soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 else {
                     soundControl.wrongSoundFun(main);
+                    soundControl.wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 break;
             }
@@ -84,9 +108,21 @@ public class GameplayGame1 extends AppCompatActivity {
                         imgEgg[countEggs].setImageResource(R.drawable.red_egg);
                     }
                     countEggs++;
+                    soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 else {
                     soundControl.wrongSoundFun(main);
+                    soundControl.wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 break;
             }
@@ -105,9 +141,21 @@ public class GameplayGame1 extends AppCompatActivity {
                         imgEgg[countEggs].setImageResource(R.drawable.blue_egg);
                     }
                     countEggs++;
+                    soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 else {
                     soundControl.wrongSoundFun(main);
+                    soundControl.wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 break;
             }
@@ -126,9 +174,21 @@ public class GameplayGame1 extends AppCompatActivity {
                         imgEgg[countEggs].setImageResource(R.drawable.green_egg);
                     }
                     countEggs++;
+                    soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 else {
                     soundControl.wrongSoundFun(main);
+                    soundControl.wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 break;
             }
@@ -147,9 +207,21 @@ public class GameplayGame1 extends AppCompatActivity {
                         imgEgg[countEggs].setImageResource(R.drawable.green_egg);
                     }
                     countEggs++;
+                    soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 else {
                     soundControl.wrongSoundFun(main);
+                    soundControl.wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                        }
+                    });
                 }
                 break;
             }

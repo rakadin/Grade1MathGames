@@ -38,4 +38,9 @@ public class Winning_activity_Slide extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        soundControl.win.stop();
+    }
 }
