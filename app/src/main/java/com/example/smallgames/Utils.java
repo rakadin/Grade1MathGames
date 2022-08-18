@@ -2,6 +2,9 @@ package com.example.smallgames;
 
 import android.os.Handler;
 
+/*
+  controll time delay
+ */
 
 public class Utils {
 

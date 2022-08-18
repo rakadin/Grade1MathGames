@@ -2,21 +2,21 @@ package com.example.smallgames;
 
 import static com.example.smallgames.R.drawable.*;
 
-import android.content.Context;
 import android.content.Intent;
-import android.hardware.display.DisplayManager;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+/*
 
+ home activity that navigate to 5 games
+
+ */
 public class MainActivity extends AppCompatActivity {
     SoundControl soundControl = new SoundControl();
     ImageButton onoffBut;
     ImageButton game1But;
+    ImageButton game2But;
    private boolean vali = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +25,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         onoffBut = findViewById(R.id.SonoffBut);
         game1But = findViewById(R.id.eggcatch);
-
+        game2But = findViewById(R.id.slide);
         //onlick for game 1
         game1But.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 soundControl.PopSoundFun(MainActivity.this,game1But);
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this,Game1.class);
+                intent.setClass(MainActivity.this, Game1.class);
+                startActivity(intent);
+                soundControl.player.pause();
+            }
+        });
+        game2But.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                soundControl.PopSoundFun(MainActivity.this,game2But);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, Slide_introduction.class);
                 startActivity(intent);
                 soundControl.player.pause();
             }
