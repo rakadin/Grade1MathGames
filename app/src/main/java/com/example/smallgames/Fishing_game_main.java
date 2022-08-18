@@ -151,8 +151,6 @@ public class Fishing_game_main extends AppCompatActivity {
         /*
         gameplay control
          */
-//        TextView top = findViewById(R.id.textTop1);
-//        top.setText(" "+ (a));
         /*
         controller of the game
          */
