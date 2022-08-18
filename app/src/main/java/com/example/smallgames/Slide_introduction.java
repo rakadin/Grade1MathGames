@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
+/*
+   slide game introduction activity
+ */
 public class Slide_introduction extends AppCompatActivity {
     ImageButton onoffBut;
     SoundControl soundControl = new SoundControl();

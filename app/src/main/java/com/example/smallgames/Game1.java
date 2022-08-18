@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
+/*
+game 1 - egg pick introduction
+ */
 public class Game1 extends AppCompatActivity {
     ImageButton onoffBut;
     SoundControl soundControl = new SoundControl();

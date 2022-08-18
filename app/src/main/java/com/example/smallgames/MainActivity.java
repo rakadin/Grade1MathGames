@@ -7,7 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+/*
 
+ home activity that navigate to 5 games
+
+ */
 public class MainActivity extends AppCompatActivity {
     SoundControl soundControl = new SoundControl();
     ImageButton onoffBut;

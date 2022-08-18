@@ -9,7 +9,9 @@ import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.ViewSwitcher;
-
+/*
+      game 1 - eggs pick main activity
+ */
 public class Game1MainActivity extends AppCompatActivity {
     Button replayBut;
     Button menuBut;

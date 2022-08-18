@@ -15,9 +15,13 @@
         android:theme="@style/Theme.SmallGames"
         tools:targetApi="31">
         <activity
-            android:name=".Slide_game_main"
+            android:name=".Winning_activity_Slide"
             android:exported="false"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Slide_game_main"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Slide_introduction"
             android:exported="false"
