@@ -26,8 +26,8 @@
 
     <ImageView
         android:id="@+id/game2_pic_"
-        android:layout_width="262dp"
-        android:layout_height="277dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="15dp"
@@ -35,15 +35,20 @@
         android:src="@drawable/game2_pic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.68"
         app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/game2_name"
-        app:layout_constraintVertical_bias="0.542"></ImageView>
+        app:layout_constraintVertical_bias="0.542"
+        app:layout_constraintWidth_percent="0.35"></ImageView>
+
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintWidth_percent="0.09"
         android:layout_marginStart="50dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
@@ -53,220 +58,437 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dice_game2"
-        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintHorizontal_bias="0.415"
         app:layout_constraintStart_toEndOf="@+id/game2_pic_"
         app:layout_constraintTop_toBottomOf="@+id/questionText"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <ImageView
+        android:id="@+id/img26"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img27"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toTopOf="@+id/game2_pic_"
+        app:layout_constraintVertical_bias="0.008"
+        app:layout_constraintWidth_percent="0.067" />
+
+    <ImageView
+        android:id="@+id/img27"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img28"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toTopOf="@+id/game2_pic_"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <ImageView
+        android:id="@+id/img28"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img29"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toTopOf="@+id/game2_pic_"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <ImageView
+        android:id="@+id/img29"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img30"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toTopOf="@+id/game2_pic_"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <ImageView
+        android:id="@+id/img30"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.117"
+        app:layout_constraintWidth_percent="0.075"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toTopOf="@+id/game2_pic_"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <ImageView
+        android:id="@+id/img25"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img26"
+        app:layout_constraintVertical_bias="0.015"
+        app:layout_constraintWidth_percent="0.067" />
+
+    <ImageView
+        android:id="@+id/img24"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img25"
+        app:layout_constraintTop_toBottomOf="@+id/img27"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <ImageView
+        android:id="@+id/img23"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img24"
+        app:layout_constraintTop_toBottomOf="@+id/img28"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <ImageView
+        android:id="@+id/img22"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img23"
+        app:layout_constraintTop_toBottomOf="@+id/img29"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TableLayout
-        android:layout_width="262dp"
-        android:layout_height="277dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game2_name"
-        app:layout_constraintVertical_bias="0.61">
-    <TableRow>
-        <ImageView
-            android:id="@+id/img26"
-            android:layout_width="56dp"
-            android:layout_height="45dp"
-            android:background="@null" />
+    <ImageView
+        android:id="@+id/img21"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img22"
+        app:layout_constraintTop_toBottomOf="@+id/img30"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.067" />
 
-        <ImageView
-            android:id="@+id/img27"
-            android:layout_width="50dp"
-            android:layout_height="45dp"
-            android:background="@null" />
+    <ImageView
+        android:id="@+id/img16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img17"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img25"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <ImageView
-            android:id="@+id/img28"
-            android:layout_width="50dp"
-            android:layout_height="45dp"
-            android:background="@null" />
+    <ImageView
+        android:id="@+id/img17"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img18"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img24"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <ImageView
-            android:id="@+id/img29"
-            android:layout_width="50dp"
-            android:layout_height="45dp"
-            android:background="@null" />
+    <ImageView
+        android:id="@+id/img18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img19"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img23"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <ImageView
-            android:id="@+id/img30"
-            android:layout_width="56dp"
-            android:layout_height="45dp"
-            android:background="@null" />
-    </TableRow>
-        <TableRow>
+    <ImageView
+        android:id="@+id/img19"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img20"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img22"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/img25"
-                android:layout_width="55dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img21"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.067" />
 
-            <ImageView
-                android:id="@+id/img24"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img16"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.067" />
 
-            <ImageView
-                android:id="@+id/img23"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img15"
+        app:layout_constraintTop_toBottomOf="@+id/img17"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/img22"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toEndOf="@+id/img14"
+        app:layout_constraintTop_toBottomOf="@+id/img18"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/img21"
-                android:layout_width="56dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-        </TableRow>
-        <TableRow>
+    <ImageView
+        android:id="@+id/img12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img13"
+        app:layout_constraintTop_toBottomOf="@+id/img19"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/img16"
-                android:layout_width="55dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="180dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img12"
+        app:layout_constraintTop_toBottomOf="@+id/img20"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.067" />
 
-            <ImageView
-                android:id="@+id/img17"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img15"
+        app:layout_constraintVertical_bias="0.02" />
 
-            <ImageView
-                android:id="@+id/img18"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img8"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img14"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/img19"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img9"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img13"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/img20"
-                android:layout_width="56dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-        </TableRow>
-        <TableRow>
+    <ImageView
+        android:id="@+id/img9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toStartOf="@+id/img10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img12"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/img15"
-                android:layout_width="55dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img11"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.067" />
 
-            <ImageView
-                android:id="@+id/img14"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img6"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/img13"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img8"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintWidth_percent="0.067" />
 
-            <ImageView
-                android:id="@+id/img12"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:layout_marginBottom="4dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img4"
+        app:layout_constraintTop_toBottomOf="@+id/img8" />
 
-            <ImageView
-                android:id="@+id/img11"
-                android:layout_width="56dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-        </TableRow>
-        <TableRow>
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="@+id/game2_pic_"
+        app:layout_constraintTop_toBottomOf="@+id/img9"
+        app:layout_constraintVertical_bias="0.25" />
 
-            <ImageView
-                android:id="@+id/img6"
-                android:layout_width="55dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-
-            <ImageView
-                android:id="@+id/img7"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-
-            <ImageView
-                android:id="@+id/img8"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-
-            <ImageView
-                android:id="@+id/img9"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-
-            <ImageView
-                android:id="@+id/img10"
-                android:layout_width="56dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-        </TableRow>
-        <TableRow>
-
-            <ImageView
-                android:id="@+id/img5"
-                android:layout_width="55dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-
-            <ImageView
-                android:id="@+id/img4"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-
-            <ImageView
-                android:id="@+id/img3"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-
-            <ImageView
-                android:id="@+id/img2"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-
-            <ImageView
-                android:id="@+id/img1"
-                android:layout_width="56dp"
-                android:layout_height="45dp"
-                android:background="@null" />
-        </TableRow>
-    </TableLayout>
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintWidth_percent="0.067"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/game2_pic_"
+        app:layout_constraintEnd_toEndOf="@+id/game2_pic_"
+        app:layout_constraintStart_toEndOf="@+id/img2"
+        app:layout_constraintTop_toBottomOf="@+id/img10" />
 
     <TextView
+        android:autoSizeTextType="uniform"
         android:id="@+id/textTop1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintWidth_percent="0.16"
         android:layout_marginTop="30dp"
         android:text="Xúc xắc nào!"
         android:textSize="20sp"
@@ -281,8 +503,8 @@
 
     <ImageButton
         android:id="@+id/dice_game2"
-        android:layout_width="155dp"
-        android:layout_height="132dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="250dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
@@ -290,20 +512,25 @@
         android:adjustViewBounds="true"
         android:background="@null"
         android:padding="20dp"
-        android:scaleType="fitCenter"
+        android:scaleType="centerCrop"
         android:src="@drawable/dice_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTop1"
         app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.2"
         tools:ignore="ContentDescription,InvalidId,NotSibling" />
 
     <Button
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/white"
+        android:background="@drawable/gradient_background_game3"
         android:id="@+id/startMove"
-        android:layout_width="137dp"
-        android:layout_height="44dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
@@ -311,15 +538,20 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toEndOf="@+id/textInput"
         app:layout_constraintTop_toBottomOf="@+id/dice_game2"
-        app:layout_constraintVertical_bias="0.151" />
+        app:layout_constraintVertical_bias="0.165"
+        app:layout_constraintWidth_percent="0.15" />
 
     <ImageButton
         android:id="@+id/SonoffBut_game2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.07"
+        app:layout_constraintHeight_percent="0.1"
+        android:scaleType="fitCenter"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@null"
@@ -333,70 +565,82 @@
         app:layout_constraintVertical_bias="0.011" />
 
     <TextView
-
         android:id="@+id/tetView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:text=" Câu hỏi"
+        android:autoSizeTextType="uniform"
+        android:text="Câu hỏi"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toEndOf="@+id/game2_pic_"
         app:layout_constraintTop_toBottomOf="@+id/game2_name"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.003"
+        app:layout_constraintWidth_percent="0.15" />
 
     <TextView
         android:id="@+id/questionText"
-        android:layout_width="130dp"
-        android:layout_height="86dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="15dp"
         android:layout_marginBottom="15dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toEndOf="@+id/game2_pic_"
         app:layout_constraintTop_toBottomOf="@+id/tetView9"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.051"
+        app:layout_constraintWidth_percent="0.12" />
 
     <TextView
         android:id="@+id/tetView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:text="   Số nào lớn hơn ? "
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toEndOf="@+id/game2_pic_"
         app:layout_constraintTop_toBottomOf="@+id/tetView8"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.25" />
 
     <TextView
         android:id="@+id/textInput"
-        android:layout_width="130dp"
-        android:layout_height="87dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="15dp"
+        android:autoSizeTextType="uniform"
         android:background="@color/white"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toEndOf="@+id/game2_pic_"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.12" />
+
     <ImageButton
         android:id="@+id/homeBut"
-        android:layout_width="34dp"
-        android:layout_height="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
         android:background="@null"
@@ -405,8 +649,10 @@
         android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.016"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintVertical_bias="0.011"
+        app:layout_constraintWidth_percent="0.07" />
 </android.support.constraint.ConstraintLayout>

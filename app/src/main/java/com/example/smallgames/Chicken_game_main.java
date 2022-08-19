@@ -14,8 +14,7 @@ public class Chicken_game_main extends AppCompatActivity {
     Chicken_game_control controller = new Chicken_game_control();
     ImageButton diceBut;
     SoundControl soundControl = new SoundControl();
-    int diceNumFinal;
-    int chicks_count = 0;
+    int diceNumFinal=0;
     ImageButton onoffBut;
     ImageButton homeBut;
     Button moveBut;
@@ -153,7 +152,12 @@ public class Chicken_game_main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int previous = temmove;
+                if((temmove+diceNumFinal)==0)
+                {
 
+                }
+                else
+                {
                     if((temmove + diceNumFinal)>21)
                     {
                         temmove += diceNumFinal;
@@ -165,6 +169,8 @@ public class Chicken_game_main extends AppCompatActivity {
                         temmove += diceNumFinal;
                         controller.setString(questionT,temmove,moveButs,previous,Chicken_game_main.this,view.getContext());
                     }
+                }
+
 
             }
         });

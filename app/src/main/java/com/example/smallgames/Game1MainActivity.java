@@ -49,7 +49,7 @@ public class Game1MainActivity extends AppCompatActivity {
     Button blueEgg1;
     Button blueEgg2;
     //end egg
-    ImageSwitcher imageSwitcher;
+    ImageView imageSwitcher;
     int diceNumFinal ;
     //    ImageView birdnest[] = {imgEgg1,imgEgg3,imgEgg4,imgEgg5,imgEgg6,imgEgg2};//get id bird nests
     int ImageSwitcherImages[] ={R.drawable.game1_pic1};// create images for img switcher
@@ -232,16 +232,7 @@ public class Game1MainActivity extends AppCompatActivity {
 
 // end clicking the eggs
         // make view for image switcher
-        imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
-            @Override
-            public View makeView() {
-                ImageView switcherImageView = new ImageView(getApplicationContext());
-//                switcherImageView.setLayoutParams(new ViewGroup.LayoutParams());
-                switcherImageView.setImageResource(ImageSwitcherImages[switcherImageLength-1]);
-                //switcherImageView.setMaxHeight(100);
-                return switcherImageView;
-            }
-        });
+       imageSwitcher.setImageResource(R.drawable.game1_pic1);
         homeBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -249,6 +240,12 @@ public class Game1MainActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(Game1MainActivity.this, MainActivity.class);
                 startActivity(intent);
+                soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                    }
+                });
             }
         });
         imageSwitcher.setImageResource(ImageSwitcherImages[switcherImageLength-1]);
@@ -280,9 +277,6 @@ public class Game1MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        soundControl.player.stop();
-    }
-    public void stopMusic(){
         soundControl.player.stop();
     }
 }

@@ -168,7 +168,7 @@ public class Slide_game_main extends AppCompatActivity {
                     intent.setClass(Slide_game_main.this, Winning_activity_Slide.class);
                     startActivity(intent);
                 }
-                else if( temmove <29)
+                else if( temmove <29 && temmove >0 )
                 {
                     table[0].setImageResource(0);
                     for (int i = move+1;i<=temmove+1;i++)

@@ -37,10 +37,22 @@ public class SoundControl extends AppCompatActivity {
             player = MediaPlayer.create(main,R.raw.backgroundmusic);
         }
         player.start();
+        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
         // Loop sound when play to the end
         player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
+                player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                    }
+                });
                 player.start();
             }
         });
@@ -71,11 +83,23 @@ public class SoundControl extends AppCompatActivity {
     {
         popSound = MediaPlayer.create(main,R.raw.pop);
         popSound.start();
+        popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     protected void PopSoundFun2(Activity main, Button onoffBut)
     {
         popSound = MediaPlayer.create(main,R.raw.pop);
         popSound.start();
+        popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     // roll the dice sound
     protected void RollSoundFun(Activity main)
@@ -85,6 +109,12 @@ public class SoundControl extends AppCompatActivity {
         {
             rollSound.start();
         }
+        rollSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     // wrong sound
     protected void wrongSoundFun(Activity main)
@@ -92,13 +122,24 @@ public class SoundControl extends AppCompatActivity {
 
         wrong = MediaPlayer.create(main,R.raw.wrong);
         wrong.start();
+        wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     // correct sound
     protected void correctSoundFun(Activity main)
     {
-
         correct = MediaPlayer.create(main,R.raw.correct);
         correct.start();
+        correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     // winning sound
     protected void winSoundFun(Activity main)
@@ -106,29 +147,59 @@ public class SoundControl extends AppCompatActivity {
 
         win= MediaPlayer.create(main,R.raw.winning);
         win.start();
+        win.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     // running sound
     protected void runSoundFun(Activity main)
     {
         run= MediaPlayer.create(main,R.raw.running);
         run.start();
+        run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     protected void runSoundStopFun(Activity main)
     {
 
         run= MediaPlayer.create(main,R.raw.running);
         run.stop();
+        run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     // go up sound
     protected void upSoundFun(Activity main)
     {
         up= MediaPlayer.create(main,R.raw.upstair);
         up.start();
+        up.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     protected void upSoundStopFun(Activity main)
     {
         up= MediaPlayer.create(main,R.raw.upstair);
         up.stop();
+        up.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
 
     // falling sound
@@ -136,10 +207,22 @@ public class SoundControl extends AppCompatActivity {
     {
         fall= MediaPlayer.create(main,R.raw.fall);
         fall.start();
+        fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
     protected void fallSoundStopFun(Activity main)
     {
         fall= MediaPlayer.create(main,R.raw.fall);
         fall.stop();
+        fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
     }
 }
