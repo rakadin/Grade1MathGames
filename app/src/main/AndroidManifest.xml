@@ -15,9 +15,21 @@
         android:theme="@style/Theme.SmallGames"
         tools:targetApi="31">
         <activity
-            android:name=".Winning_activity_card"
+            android:name=".Winning_activity_chicken"
             android:exported="false"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Chicken_game_main"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Chicken_game_introduction"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Winning_activity_card"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Card_game_main"
             android:exported="false"

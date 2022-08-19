@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton game2But;
     ImageButton game3But;
     ImageButton game4But;
+    ImageButton game5But;
    private boolean vali = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         game2But = findViewById(R.id.slide);
         game3But = findViewById(R.id.fishcatch);
         game4But = findViewById(R.id.chicken);
+        game5But = findViewById(R.id.cardch);
         //onlick for game 1
         game1But.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +88,22 @@ public class MainActivity extends AppCompatActivity {
                 soundControl.PopSoundFun(MainActivity.this,game4But);
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, Card_game_introduction.class);
+                startActivity(intent);
+                soundControl.player.pause();
+                soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        mediaPlayer.release();
+                    }
+                });
+            }
+        });
+        game5But.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                soundControl.PopSoundFun(MainActivity.this,game4But);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, Chicken_game_introduction.class);
                 startActivity(intent);
                 soundControl.player.pause();
                 soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
