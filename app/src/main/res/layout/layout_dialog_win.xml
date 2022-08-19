@@ -22,8 +22,10 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView4"
-        android:layout_width="282dp"
-        android:layout_height="195dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/cup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,8 +36,10 @@
 
     <Button
         android:id="@+id/replayBut"
-        android:layout_width="135dp"
-        android:layout_height="35dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.09"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="200dp"
         android:background="@drawable/gradient_game1"
         android:text="Chơi lại"
@@ -51,8 +55,10 @@
 
     <Button
         android:id="@+id/menuBut"
-        android:layout_width="144dp"
-        android:layout_height="35dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.09"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="200dp"
         android:background="@drawable/gradient_game1"
         android:text="Về trang chủ"

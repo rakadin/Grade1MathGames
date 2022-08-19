@@ -12,7 +12,7 @@ public class Slide_game_control  {
     SoundControl soundControl = new SoundControl();
     protected void checkAns(TextView top, TextView bot, int move, int right[], int left[], Activity main, Context context)
     {
-        if(move >=0)
+        if(move >0)
         {
             top.setText("   "+left[move-1]);
             bot.setText("   "+right[move-1]);
@@ -71,6 +71,10 @@ public class Slide_game_control  {
                     }
                 }
             });
+        }
+        else
+        {
+
         }
     }
 }

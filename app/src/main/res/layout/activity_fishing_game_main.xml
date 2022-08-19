@@ -24,9 +24,12 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText" />
     <ImageButton
+        android:scaleType="fitCenter"
         android:id="@+id/SonoffBut_game2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.07"
+        app:layout_constraintHeight_percent="0.1"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@null"
@@ -38,11 +41,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.011" />
+
     <ImageButton
         android:id="@+id/homeBut"
-        android:layout_width="34dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="60dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:background="@null"
         android:contentDescription="@string/tablemain"
@@ -50,15 +53,19 @@
         android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.003"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/SonoffBut_game2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintVertical_bias="0.011"
+        app:layout_constraintWidth_percent="0.07" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="389dp"
-        android:layout_height="290dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintWidth_percent="0.5"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="30dp"
@@ -72,9 +79,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:autoSizeTextType="uniform"
         android:id="@+id/textTop1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHeight_percent="0.07"
         android:layout_marginTop="30dp"
         android:text="Xúc xắc nào!"
         android:textSize="20sp"
@@ -89,8 +99,8 @@
 
     <ImageButton
         android:id="@+id/dice"
-        android:layout_width="109dp"
-        android:layout_height="91dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="80dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="70dp"
@@ -101,17 +111,20 @@
         android:src="@drawable/dice_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHeight_percent="0.28"
+        app:layout_constraintHorizontal_bias="0.907"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textTop1"
-        app:layout_constraintVertical_bias="0.034"
+        app:layout_constraintVertical_bias="0.037"
+        app:layout_constraintWidth_percent="0.18"
         tools:ignore="ContentDescription,InvalidId,NotSibling" />
 
     <ImageButton
         android:id="@+id/dice2"
-        android:layout_width="109dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="428dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.18"
+        app:layout_constraintHeight_percent="0.28"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="70dp"
         android:adjustViewBounds="true"
@@ -121,171 +134,199 @@
         android:src="@drawable/dice_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dice"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textTop1"
-        app:layout_constraintVertical_bias="0.034"
+        app:layout_constraintVertical_bias="0.037"
+
         tools:ignore="ContentDescription,InvalidId,NotSibling" />
 
     <ImageButton
         android:id="@+id/fish1"
-        android:layout_width="100dp"
-        android:layout_height="89dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.17"
+        app:layout_constraintHeight_percent="0.2"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/pink_1"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.062"
+
+        app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <ImageButton
         android:id="@+id/fish2"
-        android:layout_width="103dp"
-        android:layout_height="59dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHeight_percent="0.2"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/blue_5"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintVertical_bias="0.018" />
 
     <ImageButton
         android:id="@+id/fish3"
-        android:layout_width="105dp"
-        android:layout_height="74dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/green_8"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.995"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.17" />
 
     <ImageButton
         android:id="@+id/fish4"
-        android:layout_width="107dp"
-        android:layout_height="62dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/yellow_7"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.995"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintVertical_bias="0.352"
+        app:layout_constraintWidth_percent="0.17" />
 
     <ImageButton
         android:id="@+id/fish5"
-        android:layout_width="105dp"
-        android:layout_height="74dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/purple_0"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.342" />
+        app:layout_constraintVertical_bias="0.352"
+        app:layout_constraintWidth_percent="0.15" />
 
     <ImageButton
         android:id="@+id/fish6"
-        android:layout_width="105dp"
-        android:layout_height="74dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/yellow_4"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.429"
+        app:layout_constraintWidth_percent="0.17" />
 
     <ImageButton
         android:id="@+id/fish7"
-        android:layout_width="105dp"
-        android:layout_height="74dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/red_10"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintHeight_percent="0.19"
+        app:layout_constraintHorizontal_bias="0.012"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.757" />
+        app:layout_constraintVertical_bias="0.761"
+        app:layout_constraintWidth_percent="0.17" />
 
     <ImageButton
         android:id="@+id/fish8"
-        android:layout_width="105dp"
-        android:layout_height="74dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/green_2"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHeight_percent="0.17"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.685" />
+        app:layout_constraintVertical_bias="0.652"
+        app:layout_constraintWidth_percent="0.15" />
 
     <ImageButton
         android:id="@+id/fish9"
-        android:layout_width="105dp"
-        android:layout_height="74dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/red_6"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHeight_percent="0.17"
+        app:layout_constraintHorizontal_bias="0.962"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.685" />
+        app:layout_constraintVertical_bias="0.652"
+        app:layout_constraintWidth_percent="0.17" />
 
     <ImageButton
         android:id="@+id/fish11"
-        android:layout_width="109dp"
-        android:layout_height="60dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/green_9"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintHeight_percent="0.17"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.986" />
+        app:layout_constraintVertical_bias="0.984"
+        app:layout_constraintWidth_percent="0.15" />
 
     <ImageButton
         android:id="@+id/fish10"
-        android:layout_width="108dp"
-        android:layout_height="67dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/red_3"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.986" />
+        app:layout_constraintVertical_bias="0.983"
+        app:layout_constraintWidth_percent="0.15" />
 
     <TextView
+        android:autoSizeTextType="uniform"
         android:textSize="40sp"
         android:id="@+id/leftText"
-        android:layout_width="114dp"
-        android:layout_height="57dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.18"
+        app:layout_constraintHeight_percent="0.18"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -298,10 +339,13 @@
         app:layout_constraintVertical_bias="0.011" />
 
     <TextView
+        android:autoSizeTextType="uniform"
         android:textSize="40sp"
         android:id="@+id/rightText"
-        android:layout_width="114dp"
-        android:layout_height="57dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.18"
+        app:layout_constraintHeight_percent="0.18"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@color/white"
@@ -314,8 +358,10 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="279dp"
-        android:layout_height="93dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.28"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -332,8 +378,10 @@
     <ImageView
         android:scaleType="fitCenter"
         android:id="@+id/get1"
-        android:layout_width="45dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.08"
+        app:layout_constraintHeight_percent="0.06"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.237"
@@ -343,20 +391,24 @@
 
     <ImageView
         android:id="@+id/get2"
-        android:layout_width="45dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.422"
+        app:layout_constraintWidth_percent="0.08" />
 
     <ImageView
         android:id="@+id/get3"
-        android:layout_width="45dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.08"
+        app:layout_constraintHeight_percent="0.06"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
@@ -367,8 +419,10 @@
 
     <ImageView
         android:id="@+id/get4"
-        android:layout_width="45dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.08"
+        app:layout_constraintHeight_percent="0.06"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
@@ -379,13 +433,15 @@
 
     <ImageView
         android:id="@+id/get5"
-        android:layout_width="45dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.701" />
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintWidth_percent="0.08" />
 </android.support.constraint.ConstraintLayout>
