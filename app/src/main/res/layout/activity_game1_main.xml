@@ -343,12 +343,12 @@
             android:layout_marginTop="10dp"
             android:background="@null"
             android:contentDescription="@string/tablemain"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             android:src="@drawable/home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.1"
-            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintHorizontal_bias="0.024"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.016"
@@ -415,26 +415,24 @@
 
         </TableRow>
 
+        <ImageButton
+            android:id="@+id/SonoffBut"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:contentDescription="@string/tablemain"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sound_on"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/homeBut"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.043"
+            app:layout_constraintWidth_percent="0.07" />
+
 
     </android.support.constraint.ConstraintLayout>
-
-    <ImageButton
-        android:scaleType="fitCenter"
-        android:id="@+id/SonoffBut"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintWidth_percent="0.07"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@null"
-        android:contentDescription="@string/tablemain"
-        android:src="@drawable/sound_on"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.013"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
 
 </android.support.constraint.ConstraintLayout>

@@ -24,24 +24,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText" />
+
     <ImageButton
-        android:scaleType="fitCenter"
         android:id="@+id/SonoffBut_game2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintWidth_percent="0.07"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@null"
         android:contentDescription="@string/tablemain"
+        android:scaleType="centerCrop"
         android:src="@drawable/sound_on"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.008"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.011"
+        app:layout_constraintWidth_percent="0.07" />
 
     <ImageButton
         android:id="@+id/homeBut"
@@ -50,17 +51,16 @@
         android:layout_marginTop="10dp"
         android:background="@null"
         android:contentDescription="@string/tablemain"
-        android:scaleType="fitCenter"
+        android:scaleType="centerCrop"
         android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintWidth_percent="0.07"
-        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/SonoffBut_game2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.011"
-         />
+        app:layout_constraintWidth_percent="0.07" />
 
     <ImageView
         android:id="@+id/imageView4"
