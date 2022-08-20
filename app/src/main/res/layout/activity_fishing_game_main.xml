@@ -45,7 +45,7 @@
         android:id="@+id/homeBut"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="51dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="10dp"
         android:background="@null"
         android:contentDescription="@string/tablemain"
@@ -56,7 +56,6 @@
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/SonoffBut_game2"
-        app:layout_constraintStart_toStartOf="@+id/SonoffBut_game2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent="0.07" />

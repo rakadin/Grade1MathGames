@@ -43,4 +43,9 @@ public class Winning_activity_Slide extends AppCompatActivity {
         super.onStop();
         soundControl.win.stop();
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        soundControl.win.release();
+    }
 }

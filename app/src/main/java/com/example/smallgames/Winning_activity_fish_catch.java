@@ -44,4 +44,9 @@ public class Winning_activity_fish_catch extends AppCompatActivity {
         super.onStop();
         soundControl.win.stop();
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        soundControl.win.release();
+    }
 }
