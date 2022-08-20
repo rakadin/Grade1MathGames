@@ -257,9 +257,12 @@ public class Game1MainActivity extends AppCompatActivity {
     protected  void winAcOpen(){
         if(gameplayGame1.countEggs == 6)
         {
-            Intent intent = new Intent();
-            intent.setClass(Game1MainActivity.this, Winningactivity.class);
-            startActivity(intent);
+            soundControl.hooraySoundFun(Game1MainActivity.this);
+            Utils.delay(50, () -> {
+                Intent intent = new Intent();
+                intent.setClass(Game1MainActivity.this, Winningactivity.class);
+                startActivity(intent);
+            });
         }
     }
     @Override

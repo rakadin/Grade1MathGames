@@ -584,6 +584,7 @@
         app:layout_constraintWidth_percent="0.15" />
 
     <TextView
+        android:gravity="center"
         android:id="@+id/questionText"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -619,6 +620,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <TextView
+        android:gravity="center"
         android:id="@+id/textInput"
         android:layout_width="0dp"
         android:layout_height="0dp"

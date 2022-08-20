@@ -39,7 +39,7 @@ public class Chicken_game_control extends AppCompatActivity {
                 imgs[move].startAnimation(animation2);
             }
             imgs[previousMove].setImageResource(0);
-            showT.setText(" "+maths[move]);
+            showT.setText(""+maths[move]);
             soundControl.run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mediaPlayer) {
@@ -60,7 +60,7 @@ public class Chicken_game_control extends AppCompatActivity {
                 imgs[move].startAnimation(animation4);
             }
             imgs[previousMove].setImageResource(0);
-            showT.setText(" "+maths[move]);
+            showT.setText(""+maths[move]);
             soundControl.run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mediaPlayer) {

@@ -20,7 +20,7 @@ public class SoundControl extends AppCompatActivity {
     MediaPlayer win;
     MediaPlayer correct;
     MediaPlayer wrong;
-
+    MediaPlayer hooray;
     MediaPlayer popSound;
     MediaPlayer rollSound;
     protected boolean vali = true;
@@ -219,6 +219,18 @@ public class SoundControl extends AppCompatActivity {
         fall= MediaPlayer.create(main,R.raw.fall);
         fall.stop();
         fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
+    // hooray sound
+    protected void hooraySoundFun(Activity main)
+    {
+        hooray= MediaPlayer.create(main,R.raw.hooray);
+        hooray.start();
+        hooray.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
                 mediaPlayer.release();

@@ -56,6 +56,6 @@ public class Game1 extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        soundControl.player.stop();
+        soundControl.player.release();
     }
 }

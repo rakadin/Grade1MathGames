@@ -136,8 +136,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        soundControl.player.start();
+    protected void onStop() {
+        super.onStop();
+        soundControl.player.stop();
+        soundControl.player.release();
     }
 }

@@ -5,6 +5,8 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -115,6 +117,8 @@ public class Chicken_game_main extends AppCompatActivity {
         ImageButton chickens[] = {chick1,chick2,chick3,chick4,chick5,chick6,chick7,chick8,chick9,chick10};
         ImageView gets[] = {get_1,get_2,get_3,get_4,get_5};
         int chick_values[]={7,1,4,2,5,3,8,6,9,0};
+        // animation set
+        Animation bounce = AnimationUtils.loadAnimation(Chicken_game_main.this, R.anim.bounce_animation);
         /*
         dice roll controll
          */
@@ -186,9 +190,14 @@ public class Chicken_game_main extends AppCompatActivity {
                     controller.checkAns(view.getContext(),temmove,chick_values[temi],Chicken_game_main.this,chickens[temi],gets,temi);
                     if(controller.get_count == 5)
                     {
-                        Intent intent = new Intent();
-                        intent.setClass(Chicken_game_main.this, Winning_activity_chicken.class);
-                        startActivity(intent);
+                       soundControl.hooraySoundFun(Chicken_game_main.this);
+                        moveButs[temmove].startAnimation(bounce);
+                        Utils.delay(50, () -> {
+                            Intent intent = new Intent();
+                            intent.setClass(Chicken_game_main.this, Winning_activity_chicken.class);
+                            startActivity(intent);
+                        });
+
                     }
                 }
             });

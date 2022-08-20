@@ -180,7 +180,7 @@
             app:layout_constraintHorizontal_bias="0.158"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="0.347"
+            app:layout_constraintVertical_bias="0.255"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 
@@ -226,7 +226,7 @@
             app:layout_constraintHorizontal_bias="0.625"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="0.635"
+            app:layout_constraintVertical_bias="0.592"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 
@@ -250,7 +250,6 @@
             android:id="@+id/purEgg2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="257dp"
             android:background="@null"
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
@@ -258,7 +257,7 @@
             app:layout_constraintHorizontal_bias="0.809"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="0.666"
+            app:layout_constraintVertical_bias="0.88"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 

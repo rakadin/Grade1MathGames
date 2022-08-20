@@ -169,10 +169,13 @@ public class Fishing_game_main extends AppCompatActivity {
                         fishSum++;
                         if(fishSum == 5)
                         {
-                            soundControl.PopSoundFun(Fishing_game_main.this,homeBut);
-                            Intent intent = new Intent();
-                            intent.setClass(Fishing_game_main.this, Winning_activity_fish_catch.class);
-                            startActivity(intent);
+                            soundControl.hooraySoundFun(Fishing_game_main.this);
+                            Utils.delay(50, () -> {
+                                Intent intent = new Intent();
+                                intent.setClass(Fishing_game_main.this, Winning_activity_fish_catch.class);
+                                startActivity(intent);
+                            });
+
                         }
                         soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                             @Override
