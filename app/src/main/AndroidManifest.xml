@@ -8,7 +8,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/icongame"
-        android:label="MathDices"
+        android:label="Math Dices"
         android:largeHeap="true"
         android:roundIcon="@drawable/icongame"
         android:supportsRtl="true"

@@ -58,6 +58,7 @@ public class Game1MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game1_main);
+        getSupportActionBar().hide();
         imageSwitcher = findViewById(R.id.imgswt);
         homeBut = findViewById(R.id.homeBut);
         onoffBut = findViewById(R.id.SonoffBut);

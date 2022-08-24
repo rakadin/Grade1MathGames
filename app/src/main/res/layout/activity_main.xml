@@ -89,18 +89,19 @@
         android:id="@+id/eggcatch"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.20"
-        app:layout_constraintWidth_percent="0.30"
+        android:layout_marginTop="44dp"
         android:background="@drawable/gradient1"
         android:contentDescription="@string/egg"
         android:scaleType="fitCenter"
         android:src="@drawable/eggsbut"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHeight_percent="0.20"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.322"
+        app:layout_constraintWidth_percent="0.30" />
 
     <ImageButton
         android:id="@+id/cardch"
@@ -140,18 +141,19 @@
         android:id="@+id/slide"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.20"
-        app:layout_constraintWidth_percent="0.30"
+        android:layout_marginTop="44dp"
         android:background="@drawable/gradient1"
         android:contentDescription="@string/fishing"
         android:scaleType="fitCenter"
         android:src="@drawable/slidebut"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintHeight_percent="0.20"
+        app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.322"
+        app:layout_constraintWidth_percent="0.30" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView3"

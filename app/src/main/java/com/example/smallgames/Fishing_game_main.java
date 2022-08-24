@@ -50,6 +50,7 @@ public class Fishing_game_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fishing_game_main);
+        getSupportActionBar().hide();
         //get id
         // onoffBut
         onoffBut = findViewById(R.id.SonoffBut_game2);

@@ -21,6 +21,7 @@ public class Game1 extends AppCompatActivity {
         onoffBut = findViewById(R.id.SonoffBut);
         game1But = findViewById(R.id.nextBut);
         soundControl.OnOffFun(Game1.this,onoffBut);
+        getSupportActionBar().hide();
 
         // next game 1 main activity function
         game1But.setOnClickListener(new View.OnClickListener() {

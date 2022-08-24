@@ -68,6 +68,7 @@ public class Slide_game_main extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide_game_main);
+        getSupportActionBar().hide();
         onoffBut = findViewById(R.id.SonoffBut_game2);
         diceBut = findViewById(R.id.dice_game2);
         // questions

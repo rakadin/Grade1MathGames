@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         soundControl.vali = true;
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
         onoffBut = findViewById(R.id.SonoffBut);
         game1But = findViewById(R.id.eggcatch);
         game2But = findViewById(R.id.slide);

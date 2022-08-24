@@ -67,6 +67,7 @@ public class Chicken_game_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chicken_game_main);
+        getSupportActionBar().hide();
         diceBut = findViewById(R.id.dice);
         onoffBut = findViewById(R.id.SonoffBut_game2);
         homeBut = findViewById(R.id.homeBut);

@@ -15,6 +15,7 @@ public class Chicken_game_introduction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chicken_game_introduction);
+        getSupportActionBar().hide();
         onoffBut = findViewById(R.id.SonoffBut2);
         game1But = findViewById(R.id.nextBut2);
         soundControl.OnOffFun(Chicken_game_introduction.this,onoffBut);
