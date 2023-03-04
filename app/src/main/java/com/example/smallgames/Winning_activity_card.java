@@ -15,6 +15,7 @@ public class Winning_activity_card extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_win);
+        getSupportActionBar().hide();
         soundControl.winSoundFun(Winning_activity_card.this);
         replayBut = findViewById(R.id.replayBut);
         menuBut = findViewById(R.id.menuBut);
@@ -43,5 +44,10 @@ public class Winning_activity_card extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         soundControl.win.stop();
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        soundControl.win.release();
     }
 }

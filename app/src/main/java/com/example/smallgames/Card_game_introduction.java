@@ -15,6 +15,7 @@ public class Card_game_introduction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_game_introduction);
+        getSupportActionBar().hide();
         onoffBut = findViewById(R.id.SonoffBut2);
         game1But = findViewById(R.id.nextBut2);
         soundControl.OnOffFun(Card_game_introduction.this,onoffBut);
@@ -34,7 +35,7 @@ public class Card_game_introduction extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        soundControl.player.stop();
+        soundControl.player.release();
     }
 
     @Override
@@ -47,5 +48,6 @@ public class Card_game_introduction extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         soundControl.player.stop();
+        soundControl.player.release();
     }
 }

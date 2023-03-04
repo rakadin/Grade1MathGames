@@ -11,15 +11,18 @@
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/drawable/gradient_card_game.xml" value="0.2545" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/drawable/gradient_chicken.xml" value="0.2785" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/drawable/gradient_game1.xml" value="0.2055" />
+        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/drawable/rounded_game_button.xml" value="0.259" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_card_game_introduction.xml" value="0.275" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_card_game_main.xml" value="0.4" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_chicken_game_introduction.xml" value="0.275" />
-        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_chicken_game_main.xml" value="0.176" />
-        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_fishing_game_main.xml" value="0.4" />
+        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_chicken_game_main.xml" value="0.4" />
+        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_choose_part.xml" value="0.264" />
+        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_fishing_game_main.xml" value="0.6" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_fishing_introduction.xml" value="0.264" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_game1.xml" value="0.264" />
-        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_game1_main.xml" value="0.264" />
+        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_game1_main.xml" value="0.44917463075586445" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_part2_homepage.xml" value="0.2609375" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_slide_game_main.xml" value="0.4" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_slide_introduction.xml" value="0.25" />
         <entry key="..\:/MyApplication/SmallGames/app/src/main/res/layout/activity_slide_main.xml" value="0.275" />

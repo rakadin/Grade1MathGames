@@ -34,6 +34,7 @@ public class Card_game_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_game_main);
+        getSupportActionBar().hide();
         // get id
         diceBut = findViewById(R.id.dice);
         // card id
@@ -115,15 +116,11 @@ public class Card_game_main extends AppCompatActivity {
                         // if card count == 6 -> win
                         if(card_cound == 6)
                         {
-                            soundControl.PopSoundFun(Card_game_main.this,homeBut);
-                            Intent intent = new Intent();
-                            intent.setClass(Card_game_main.this, Winning_activity_card.class);
-                            startActivity(intent);
-                            soundControl.popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                @Override
-                                public void onCompletion(MediaPlayer mediaPlayer) {
-                                    mediaPlayer.release();
-                                }
+                            soundControl.hooraySoundFun(Card_game_main.this);
+                            Utils.delay(50, () -> {
+                                Intent intent = new Intent();
+                                intent.setClass(Card_game_main.this, Winning_activity_card.class);
+                                startActivity(intent);
                             });
                         }
                     }

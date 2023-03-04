@@ -17,6 +17,7 @@ public class Slide_introduction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide_introduction);
+        getSupportActionBar().hide();
         onoffBut = findViewById(R.id.SonoffBut2);
         game1But = findViewById(R.id.nextBut2);
         soundControl.OnOffFun(Slide_introduction.this,onoffBut);
@@ -37,7 +38,7 @@ public class Slide_introduction extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        soundControl.player.stop();
+        soundControl.player.release();
     }
 
     @Override
@@ -50,5 +51,6 @@ public class Slide_introduction extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         soundControl.player.stop();
+        soundControl.player.release();
     }
 }

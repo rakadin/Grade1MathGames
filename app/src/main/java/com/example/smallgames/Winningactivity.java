@@ -17,6 +17,7 @@ public class Winningactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_win);
+        getSupportActionBar().hide();
         soundControl.winSoundFun(Winningactivity.this);
         soundControl.win.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -63,5 +64,12 @@ public class Winningactivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         soundControl.win.stop();
+        soundControl.win.release();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        soundControl.win.release();
     }
 }

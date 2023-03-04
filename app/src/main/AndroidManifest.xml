@@ -8,16 +8,30 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/icongame"
-        android:label="MathDices"
+        android:label="Math Dices"
         android:largeHeap="true"
         android:roundIcon="@drawable/icongame"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallGames"
         tools:targetApi="31">
         <activity
+            android:name=".part2.Part2_Homepage_Activity"
+            android:exported="false" android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".part2.Choose_part_activity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Winning_activity_chicken"
             android:exported="false"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Chicken_game_main"
             android:exported="false"
@@ -77,13 +91,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

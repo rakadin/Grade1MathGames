@@ -68,6 +68,7 @@ public class Slide_game_main extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide_game_main);
+        getSupportActionBar().hide();
         onoffBut = findViewById(R.id.SonoffBut_game2);
         diceBut = findViewById(R.id.dice_game2);
         // questions
@@ -81,6 +82,7 @@ public class Slide_game_main extends AppCompatActivity {
         Animation animation3 = AnimationUtils.loadAnimation(this, R.anim.animation_go_up_left);
         Animation animation4 = AnimationUtils.loadAnimation(this, R.anim.anim_go_up_left_2);
         Animation animation5 = AnimationUtils.loadAnimation(this, R.anim.anim_down_right);
+        Animation bounce = AnimationUtils.loadAnimation(this, R.anim.bounce_animation);
         // get image view id for character
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
@@ -162,11 +164,21 @@ public class Slide_game_main extends AppCompatActivity {
                 }
                 if(temmove == 29)
                 {
-                    table[temmove].setImageResource(R.drawable.mario);
-                    table[temmove].setImageResource(R.drawable.mario);
-                    Intent intent = new Intent();
-                    intent.setClass(Slide_game_main.this, Winning_activity_Slide.class);
-                    startActivity(intent);
+
+                    table[temmove-diceNumFinal].setImageResource(0);
+                    table[temmove].setImageResource(R.drawable.mario2);
+                    table[temmove].startAnimation(animation2);
+                    Utils.delay(4, () -> {
+                        table[temmove].setImageResource(R.drawable.mario);
+                        table[temmove].startAnimation(bounce);
+                        soundControl.hooraySoundFun(Slide_game_main.this);
+                    });
+                    Utils.delay(50, () -> {
+                        Intent intent = new Intent();
+                        intent.setClass(Slide_game_main.this, Winning_activity_Slide.class);
+                        startActivity(intent);
+                    });
+
                 }
                 else if( temmove <29 && temmove >0 )
                 {
@@ -187,18 +199,19 @@ public class Slide_game_main extends AppCompatActivity {
                             table[16].setImageResource(0);//delete pic from previous slide move
                             if(i==temmove+1)
                             {
-                                soundControl.runSoundFun(Slide_game_main.this);
+
                                 int previousmove = i -2;
-                                // release fall sound
-                                soundControl.run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                    @Override
-                                    public void onCompletion(MediaPlayer mediaPlayer) {
-                                        mediaPlayer.release();
-                                    }
-                                });
+//                                // release fall sound
+//                                soundControl.run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//                                    @Override
+//                                    public void onCompletion(MediaPlayer mediaPlayer) {
+//                                        mediaPlayer.release();
+//                                    }
+//                                });
                                 // when character go to lader -> go up
                                 if(temmove==3)
                                 {
+                                    soundControl.runSoundFun(Slide_game_main.this);
                                     table[i-1].setImageResource(R.drawable.mario);
                                     table[i-1].startAnimation(animation);
                                     table[i-2].setImageResource(0);
@@ -227,6 +240,7 @@ public class Slide_game_main extends AppCompatActivity {
                                 }
                                 if(temmove==12)
                                 {
+                                    soundControl.runSoundFun(Slide_game_main.this);
                                     table[i-1].setImageResource(R.drawable.mario);
                                     table[i-1].startAnimation(animation);
                                     table[i-2].setImageResource(0);
@@ -292,11 +306,11 @@ public class Slide_game_main extends AppCompatActivity {
                             table[27].setImageResource(0);//delete pic from previous slide move
                             table[16].setImageResource(0);//delete pic from previous slide move
                             if(i==temmove+1){
-                                soundControl.runSoundFun(Slide_game_main.this);
                                 int previousmove = i-2;
                                 // when character go to slide -> go down
                                 if(temmove==18)
                                 {
+                                    soundControl.runSoundFun(Slide_game_main.this);
                                     table[i-1].setImageResource(R.drawable.mario2);
                                     table[i-1].startAnimation(animation4);
                                     table[i-2].setImageResource(0);
@@ -325,6 +339,7 @@ public class Slide_game_main extends AppCompatActivity {
                                 }
                                 if(temmove==27)
                                 {
+                                    soundControl.runSoundFun(Slide_game_main.this);
                                     table[i-1].setImageResource(R.drawable.mario2);
                                     table[i-1].startAnimation(animation4);
                                     table[i-2].setImageResource(0);
@@ -402,7 +417,7 @@ public class Slide_game_main extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        soundControl.player.stop();
+        soundControl.player.release();
     }
 
     @Override
@@ -415,5 +430,6 @@ public class Slide_game_main extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         soundControl.player.stop();
+        soundControl.player.release();
     }
 }

@@ -14,8 +14,8 @@ public class Slide_game_control  {
     {
         if(move >0)
         {
-            top.setText("   "+left[move-1]);
-            bot.setText("   "+right[move-1]);
+            top.setText(""+left[move-1]);
+            bot.setText(""+right[move-1]);
             top.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

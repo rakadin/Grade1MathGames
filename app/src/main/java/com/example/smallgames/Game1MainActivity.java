@@ -58,6 +58,7 @@ public class Game1MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game1_main);
+        getSupportActionBar().hide();
         imageSwitcher = findViewById(R.id.imgswt);
         homeBut = findViewById(R.id.homeBut);
         onoffBut = findViewById(R.id.SonoffBut);
@@ -257,9 +258,12 @@ public class Game1MainActivity extends AppCompatActivity {
     protected  void winAcOpen(){
         if(gameplayGame1.countEggs == 6)
         {
-            Intent intent = new Intent();
-            intent.setClass(Game1MainActivity.this, Winningactivity.class);
-            startActivity(intent);
+            soundControl.hooraySoundFun(Game1MainActivity.this);
+            Utils.delay(50, () -> {
+                Intent intent = new Intent();
+                intent.setClass(Game1MainActivity.this, Winningactivity.class);
+                startActivity(intent);
+            });
         }
     }
     @Override

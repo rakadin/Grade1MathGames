@@ -4,6 +4,7 @@ import static com.example.smallgames.R.drawable.sound_off;
 import static com.example.smallgames.R.drawable.sound_on;
 
 import android.app.Activity;
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,14 +14,14 @@ import android.widget.ImageButton;
      control all sounds in the project
  */
 public class SoundControl extends AppCompatActivity {
-    MediaPlayer player;
+    public MediaPlayer player;
     MediaPlayer up;
     MediaPlayer fall;
     MediaPlayer run;
     MediaPlayer win;
     MediaPlayer correct;
     MediaPlayer wrong;
-
+    MediaPlayer hooray;
     MediaPlayer popSound;
     MediaPlayer rollSound;
     protected boolean vali = true;
@@ -78,7 +79,31 @@ public class SoundControl extends AppCompatActivity {
         });
 
     }
+    //play theme song
+    public void themeSongFunc(Context context)
+    {
+        player = MediaPlayer.create(context,R.raw.theme_song);
+        player.start();
+        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+                player.release();
+            }
+        });
+    }
     // pop sound
+    public  void touchButFunc(Context context)
+    {
+        popSound = MediaPlayer.create(context,R.raw.pop);
+        popSound.start();
+        popSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
     protected void PopSoundFun(Activity main, ImageButton onoffBut)
     {
         popSound = MediaPlayer.create(main,R.raw.pop);
@@ -219,6 +244,18 @@ public class SoundControl extends AppCompatActivity {
         fall= MediaPlayer.create(main,R.raw.fall);
         fall.stop();
         fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
+    // hooray sound
+    protected void hooraySoundFun(Activity main)
+    {
+        hooray= MediaPlayer.create(main,R.raw.hooray);
+        hooray.start();
+        hooray.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
                 mediaPlayer.release();
