@@ -34,7 +34,7 @@ public class Choose_part_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-               // intent.setClass(Choose_part_activity.this, MainActivity.class);
+                intent.setClass(Choose_part_activity.this, Part2_Homepage_Activity.class);
                 startActivity(intent);
             }
         });

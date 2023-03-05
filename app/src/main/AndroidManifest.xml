@@ -15,9 +15,19 @@
         android:theme="@style/Theme.SmallGames"
         tools:targetApi="31">
         <activity
+            android:name=".part2.winning_activity.Winning_activity_golden_island"
+            android:exported="false" android:screenOrientation="landscape" />
+        <activity
+            android:name=".part2.game_rules.GoldIsland_rule"
+            android:exported="false" android:screenOrientation="landscape" />
+        <activity
+            android:name=".part2.game_acitivity.GoldIslandActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".part2.Part2_Homepage_Activity"
-            android:exported="false" android:screenOrientation="landscape"
-            />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".part2.Choose_part_activity"
             android:exported="true"
@@ -91,7 +101,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

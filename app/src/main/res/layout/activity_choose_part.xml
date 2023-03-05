@@ -9,6 +9,7 @@
 
 
     <TextView
+        android:background="@drawable/rounded_game_button"
         android:fontFamily="sans-serif"
         android:id="@+id/textView3"
         android:layout_width="0dp"
@@ -16,7 +17,8 @@
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="Sách kết nối tri thức môn toán lớp 1"
-        android:textColor="#FFEB3B"
+        android:textColor="#9C27B0"
+        android:padding="10dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
