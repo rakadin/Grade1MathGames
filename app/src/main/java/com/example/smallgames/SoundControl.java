@@ -15,19 +15,19 @@ import android.widget.ImageButton;
  */
 public class SoundControl extends AppCompatActivity {
     public MediaPlayer player;
-    MediaPlayer up;
-    MediaPlayer fall;
-    MediaPlayer run;
-    MediaPlayer win;
-    MediaPlayer correct;
-    MediaPlayer wrong;
-    MediaPlayer hooray;
-    MediaPlayer popSound;
-    MediaPlayer rollSound;
+    public MediaPlayer up;
+    public MediaPlayer fall;
+    public MediaPlayer run;
+    public MediaPlayer win;
+    public MediaPlayer correct;
+    public MediaPlayer wrong;
+    public MediaPlayer hooray;
+    public MediaPlayer popSound;
+    public MediaPlayer rollSound;
     protected boolean vali = true;
 
     // background sound control
-    protected void OnOffFun(Activity main, ImageButton onoffBut)
+    public void OnOffFun(Activity main, ImageButton onoffBut)
     {
         if (vali == true){
             onoffBut.setImageResource(sound_on);
@@ -104,7 +104,7 @@ public class SoundControl extends AppCompatActivity {
             }
         });
     }
-    protected void PopSoundFun(Activity main, ImageButton onoffBut)
+    public void PopSoundFun(Activity main, ImageButton onoffBut)
     {
         popSound = MediaPlayer.create(main,R.raw.pop);
         popSound.start();
@@ -115,7 +115,7 @@ public class SoundControl extends AppCompatActivity {
             }
         });
     }
-    protected void PopSoundFun2(Activity main, Button onoffBut)
+    public void PopSoundFun2(Activity main, Button onoffBut)
     {
         popSound = MediaPlayer.create(main,R.raw.pop);
         popSound.start();
@@ -127,10 +127,10 @@ public class SoundControl extends AppCompatActivity {
         });
     }
     // roll the dice sound
-    protected void RollSoundFun(Activity main)
+    public void RollSoundFun(Activity main)
     {
         rollSound = MediaPlayer.create(main,R.raw.dicerollsound);
-        for (int i = 0 ; i < 50;i++)
+        for (int i = 0 ; i < 10;i++)
         {
             rollSound.start();
         }
@@ -142,7 +142,7 @@ public class SoundControl extends AppCompatActivity {
         });
     }
     // wrong sound
-    protected void wrongSoundFun(Activity main)
+    public void wrongSoundFun(Activity main)
     {
 
         wrong = MediaPlayer.create(main,R.raw.wrong);
@@ -155,7 +155,7 @@ public class SoundControl extends AppCompatActivity {
         });
     }
     // correct sound
-    protected void correctSoundFun(Activity main)
+    public void correctSoundFun(Activity main)
     {
         correct = MediaPlayer.create(main,R.raw.correct);
         correct.start();
@@ -167,7 +167,7 @@ public class SoundControl extends AppCompatActivity {
         });
     }
     // winning sound
-    protected void winSoundFun(Activity main)
+    public void winSoundFun(Activity main)
     {
 
         win= MediaPlayer.create(main,R.raw.winning);
@@ -180,7 +180,7 @@ public class SoundControl extends AppCompatActivity {
         });
     }
     // running sound
-    protected void runSoundFun(Activity main)
+    public void runSoundFun(Activity main)
     {
         run= MediaPlayer.create(main,R.raw.running);
         run.start();
@@ -191,7 +191,7 @@ public class SoundControl extends AppCompatActivity {
             }
         });
     }
-    protected void runSoundStopFun(Activity main)
+    public void runSoundStopFun(Activity main)
     {
 
         run= MediaPlayer.create(main,R.raw.running);
@@ -204,7 +204,7 @@ public class SoundControl extends AppCompatActivity {
         });
     }
     // go up sound
-    protected void upSoundFun(Activity main)
+    public void upSoundFun(Activity main)
     {
         up= MediaPlayer.create(main,R.raw.upstair);
         up.start();
@@ -215,7 +215,7 @@ public class SoundControl extends AppCompatActivity {
             }
         });
     }
-    protected void upSoundStopFun(Activity main)
+    public void upSoundStopFun(Activity main)
     {
         up= MediaPlayer.create(main,R.raw.upstair);
         up.stop();
@@ -228,7 +228,7 @@ public class SoundControl extends AppCompatActivity {
     }
 
     // falling sound
-    protected void fallSoundFun(Activity main)
+    public void fallSoundFun(Activity main)
     {
         fall= MediaPlayer.create(main,R.raw.fall);
         fall.start();
@@ -239,7 +239,7 @@ public class SoundControl extends AppCompatActivity {
             }
         });
     }
-    protected void fallSoundStopFun(Activity main)
+    public void fallSoundStopFun(Activity main)
     {
         fall= MediaPlayer.create(main,R.raw.fall);
         fall.stop();
@@ -251,11 +251,22 @@ public class SoundControl extends AppCompatActivity {
         });
     }
     // hooray sound
-    protected void hooraySoundFun(Activity main)
+    public void hooraySoundFun(Activity main)
     {
         hooray= MediaPlayer.create(main,R.raw.hooray);
         hooray.start();
         hooray.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
+    public void sailingSoundFunc(Context context)
+    {
+        fall= MediaPlayer.create(context,R.raw.ship_sailing_sound);
+        fall.start();
+        fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
                 mediaPlayer.release();

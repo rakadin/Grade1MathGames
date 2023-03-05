@@ -9,12 +9,15 @@
 
     <TextView
         android:id="@+id/game2_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.1"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         android:text="Câu cá"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:autoSizeTextType="uniform"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +90,8 @@
         app:layout_constraintHeight_percent="0.07"
         android:layout_marginTop="30dp"
         android:text="Xúc xắc nào!"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -321,7 +325,9 @@
 
     <TextView
         android:autoSizeTextType="uniform"
-        android:textSize="40sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/black"
         android:id="@+id/leftText"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -330,7 +336,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/white"
+        android:background="@drawable/rounded_game_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
@@ -338,23 +344,26 @@
         app:layout_constraintTop_toBottomOf="@+id/dice"
         app:layout_constraintVertical_bias="0.011" />
 
+
     <TextView
-        android:autoSizeTextType="uniform"
-        android:textSize="40sp"
         android:id="@+id/rightText"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.18"
-        app:layout_constraintHeight_percent="0.18"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:background="@color/white"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounded_game_button"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHeight_percent="0.18"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/dice2"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.015"
+        app:layout_constraintWidth_percent="0.18" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -444,4 +453,21 @@
         app:layout_constraintTop_toTopOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.8"
         app:layout_constraintWidth_percent="0.08" />
+
+    <TextView
+        android:gravity="center"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounded_game_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:text="Trừ đi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="@+id/dice2"
+        app:layout_constraintTop_toBottomOf="@+id/textTop1"
+        app:layout_constraintVertical_bias="0.515"
+        app:layout_constraintWidth_percent="0.07" />
 </android.support.constraint.ConstraintLayout>

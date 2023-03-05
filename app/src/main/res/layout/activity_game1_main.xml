@@ -9,12 +9,15 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.4"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         android:text="Nhặt trứng"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:autoSizeTextType="uniform"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +35,7 @@
         tools:layout_editor_absoluteY="-63dp">
 
         <ImageView
-
+            android:src="@drawable/game1_pic1"
             android:id="@+id/imgswt"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -54,10 +57,10 @@
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.233"
+            app:layout_constraintHorizontal_bias="0.158"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="0.119"
+            app:layout_constraintVertical_bias="0.137"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 
@@ -85,7 +88,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.841"
+            app:layout_constraintHorizontal_bias="0.92"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
             app:layout_constraintVertical_bias="0.128"
@@ -115,7 +118,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintHorizontal_bias="0.841"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
             app:layout_constraintVertical_bias="0.031"
@@ -146,7 +149,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.658"
+            app:layout_constraintHorizontal_bias="0.708"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
             app:layout_constraintVertical_bias="0.179"
@@ -195,7 +198,7 @@
             app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="0.577"
+            app:layout_constraintVertical_bias="0.542"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 
@@ -207,10 +210,10 @@
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.748"
+            app:layout_constraintHorizontal_bias="0.78"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="0.577"
+            app:layout_constraintVertical_bias="0.542"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 
@@ -223,7 +226,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.625"
+            app:layout_constraintHorizontal_bias="0.658"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
             app:layout_constraintVertical_bias="0.592"
@@ -234,15 +237,14 @@
             android:id="@+id/grEgg6"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="257dp"
             android:background="@null"
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.194"
+            app:layout_constraintHorizontal_bias="0.158"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="0.666"
+            app:layout_constraintVertical_bias="0.841"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 
@@ -254,10 +256,10 @@
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.809"
+            app:layout_constraintHorizontal_bias="0.841"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="0.88"
+            app:layout_constraintVertical_bias="0.869"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 
@@ -269,10 +271,10 @@
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.561"
+            app:layout_constraintHorizontal_bias="0.564"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="0.968"
+            app:layout_constraintVertical_bias="0.943"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 
@@ -280,15 +282,14 @@
             android:id="@+id/redEgg3"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="289dp"
             android:background="@null"
             app:layout_constraintBottom_toBottomOf="@+id/imgswt"
             app:layout_constraintEnd_toEndOf="@+id/imgswt"
             app:layout_constraintHeight_percent="0.11"
-            app:layout_constraintHorizontal_bias="0.341"
+            app:layout_constraintHorizontal_bias="0.305"
             app:layout_constraintStart_toStartOf="@+id/imgswt"
             app:layout_constraintTop_toTopOf="@+id/imgswt"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.968"
             app:layout_constraintWidth_percent="0.07"
             tools:ignore="MissingConstraints" />
 
@@ -299,7 +300,7 @@
             android:layout_marginTop="30dp"
             android:autoSizeTextType="uniform"
             android:text="Xúc xắc nào!"
-            android:textSize="20sp"
+            android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -353,67 +354,96 @@
             app:layout_constraintVertical_bias="0.016"
             app:layout_constraintWidth_percent="0.07" />
 
-        <TableRow
-            android:id="@+id/table1"
+
+        <ImageView
+            android:id="@+id/ans1"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.13"
-            app:layout_constraintWidth_percent="0.5"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="10dp"
+            android:background="@drawable/birdnest"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.98"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imgswt"
             app:layout_constraintTop_toBottomOf="@+id/dice"
-            app:layout_constraintVertical_bias="1.0"
-            >
+            app:layout_constraintVertical_bias="0.776"
+            app:layout_constraintWidth_percent="0.08"
+            tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/ans1"
-                android:layout_width="60dp"
-                android:layout_height="52dp"
-                android:background="@drawable/birdnest"
-                tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/ans2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/birdnest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ans6"
+            app:layout_constraintTop_toBottomOf="@+id/dice"
+            app:layout_constraintVertical_bias="0.779"
+            app:layout_constraintWidth_percent="0.08"
+            tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/ans3"
-                android:layout_width="60dp"
-                android:layout_height="52dp"
-                android:background="@drawable/birdnest"
-                tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/ans3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/birdnest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ans1"
+            app:layout_constraintTop_toBottomOf="@+id/dice"
+            app:layout_constraintVertical_bias="0.776"
+            app:layout_constraintWidth_percent="0.08"
+            tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/ans4"
-                android:layout_width="60dp"
-                android:layout_height="52dp"
-                android:background="@drawable/birdnest"
-                tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/ans4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/birdnest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ans3"
+            app:layout_constraintTop_toBottomOf="@+id/dice"
+            app:layout_constraintVertical_bias="0.776"
+            app:layout_constraintWidth_percent="0.08"
+            tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/ans5"
-                android:layout_width="60dp"
-                android:layout_height="52dp"
-                android:background="@drawable/birdnest"
-                tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/ans5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/birdnest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ans4"
+            app:layout_constraintTop_toBottomOf="@+id/dice"
+            app:layout_constraintVertical_bias="0.776"
+            app:layout_constraintWidth_percent="0.08"
+            tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/ans6"
-                android:layout_width="60dp"
-                android:layout_height="52dp"
-                android:background="@drawable/birdnest"
-                tools:ignore="ContentDescription" />
-
-            <ImageView
-                android:id="@+id/ans2"
-                android:layout_width="60dp"
-                android:layout_height="52dp"
-                android:background="@drawable/birdnest"
-                tools:ignore="ContentDescription" />
-
-        </TableRow>
-
+        <ImageView
+            android:id="@+id/ans6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/birdnest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ans5"
+            app:layout_constraintTop_toBottomOf="@+id/dice"
+            app:layout_constraintVertical_bias="0.776"
+            app:layout_constraintWidth_percent="0.08"
+            tools:ignore="ContentDescription" />
         <ImageButton
             android:id="@+id/SonoffBut"
             android:layout_width="0dp"

@@ -8,6 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.example.smallgames.part2.Choose_part_activity;
+
 /*
 
  home activity that navigate to 5 games
@@ -20,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton game2But;
     ImageButton game3But;
     ImageButton game4But;
-    ImageButton game5But;
+    ImageButton game5But,bookBut;
    private boolean vali = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,16 @@ public class MainActivity extends AppCompatActivity {
         game3But = findViewById(R.id.fishcatch);
         game4But = findViewById(R.id.chicken);
         game5But = findViewById(R.id.cardch);
+        bookBut = findViewById(R.id.bookBut);
+        // choose book
+        bookBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(view.getContext(), Choose_part_activity.class);
+                startActivity(intent);
+            }
+        });
         //onlick for game 1
         game1But.setOnClickListener(new View.OnClickListener() {
             @Override
