@@ -3,6 +3,7 @@ package com.example.smallgames.part2.game_acitivity;
 import static com.example.smallgames.R.drawable.home;
 import static com.example.smallgames.R.drawable.sound_on;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,7 @@ import com.example.smallgames.Slide_game_main;
 import com.example.smallgames.SoundControl;
 import com.example.smallgames.Utils;
 import com.example.smallgames.part2.Part2_Homepage_Activity;
+import com.example.smallgames.part2.game_controller.Gif_PopUp_Controller;
 import com.example.smallgames.part2.game_controller.GoldIsland_Controller;
 import com.example.smallgames.part2.winning_activity.Winning_activity_golden_island;
 
@@ -30,6 +32,8 @@ public class GoldIslandActivity extends AppCompatActivity {
     ImageButton soundBut,homeBut,diceBut;
     GifImageView ship_gif,chest_gif;
     TextView num_now;
+    Dialog dialog ;
+    Gif_PopUp_Controller gif_popUp_controller = new Gif_PopUp_Controller();// call controller
     int diceNumFinal = 0;
     int now_loc =0, previous_loc =0;
     Button loc_1,loc_2,loc_3,loc_4,loc_5,loc_6,loc_7,loc_8,loc_9,loc_10,loc_11,loc_12,loc_13,loc_14,loc_15,loc_16,loc_17,loc_18,loc_19,loc_20,
@@ -43,6 +47,7 @@ public class GoldIslandActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gold_island);
         getSupportActionBar().hide();
+        dialog = new Dialog(GoldIslandActivity.this);// dialog
         // get idS
         soundBut = findViewById(R.id.SonoffBut);
         homeBut = findViewById(R.id.homeBut);
@@ -72,7 +77,7 @@ public class GoldIslandActivity extends AppCompatActivity {
                 {
                     now_loc = now_loc - diceNumFinal;
                     previous_loc = tempr;
-                    ship_gif.setVisibility(View.GONE);
+                    dialog.dismiss();
                 }
                 else
                 {
@@ -84,9 +89,10 @@ public class GoldIslandActivity extends AppCompatActivity {
 
                         Utils.delay(55, () -> {
                             soundControl.hooraySoundFun(GoldIslandActivity.this);
-                            getChest();
+                            gif_popUp_controller.show_gold_chest(dialog);
                         });
                         Utils.delay(125, () -> {
+                            dialog.dismiss();
                            Intent intent = new Intent();
                            intent.setClass(view.getContext(), Winning_activity_golden_island.class);
                            startActivity(intent);
@@ -122,12 +128,14 @@ public class GoldIslandActivity extends AppCompatActivity {
                             multiShip[now_loc-1].setAnimation(animation4);
                         });
                     }
-
                     soundControl.sailingSoundFunc(view.getContext());
-                    ship_gif.setVisibility(View.VISIBLE);
+                    gif_popUp_controller.show_ship_sailing(dialog);
                     Utils.delay(55, () -> {
                         soundControl.fall.release();
-                        ship_gif.setVisibility(View.GONE);
+                        if(now_loc <39)
+                        { // dismiss dialog after few secs when location <39
+                            dialog.dismiss();
+                        }
                         multiShip[now_loc-1].setBackgroundResource(R.drawable.pirate_ship);
                         goldIsland_controller.show_num(num_now,now_loc+1);//show location number
                         if(previous_loc>0)
@@ -222,10 +230,7 @@ public class GoldIslandActivity extends AppCompatActivity {
         loc_38 = findViewById(R.id.loc_39);
         loc_39 = findViewById(R.id.loc_40);
     }
-    void getChest()
-    {
-        chest_gif.setVisibility(View.VISIBLE);
-    }
+
     // if restart set activity again
     @Override
     protected void onRestart() {

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".part2.game_rules.GoldIsland_rule"
-    android:background="@drawable/gradient_card_game">
+    android:background="@drawable/gradient_card_game"
+    tools:context=".part2.game_rules.Fishing_2_rule">
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:autoSizeTextType="uniform"
-        android:text="Luật chơi Đảo giấu vàng"
+        android:text="Luật chơi Câu cá"
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -33,8 +33,10 @@
         android:layout_marginStart="75dp"
         android:layout_marginEnd="75dp"
         android:autoSizeTextType="uniform"
-        android:text="- Chơi theo nhóm \n- Người chơi bắt đầu từ ô xuất phát. Khi đến lượt, người chơi gieo xúc xắc. Đếm số chấm ở mặt trên xúc xắc rồi nhấn nút 'Di chuyển' để con thuyền di chuyển số ô bằng số chấm nhận được. Nếu đến hình tam giác xanh thì đi tiếp theo hướng mũi tên.
-\n- Đọc to số trong mỗi ô đi đến.\n-Trò chơi kết thúc khi có người đến được Đảo giấu vàng."
+        android:text="- Chơi theo nhóm.
+\n- Người chơi bắt đầu từ ô xuất phát. Khi đến lượt, người chơi gieo xúc xắc. Đếm số chấm ở mặt trên xúc xắc rồi nhấn nút 'Di chuyển' để chú chim cánh cụt di chuyển số ô bằng số chấm nhận được.
+\n- Câu con cá thích hợp với số ở ô đang đứng.
+\n- Trò chơi kết thúc khi câu được hết cá."
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

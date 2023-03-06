@@ -154,6 +154,19 @@ public class SoundControl extends AppCompatActivity {
             }
         });
     }
+    // wrong sound
+    public void wrongSoundFun2(Context context)
+    {
+
+        wrong = MediaPlayer.create(context,R.raw.wrong);
+        wrong.start();
+        wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
     // correct sound
     public void correctSoundFun(Activity main)
     {
@@ -251,6 +264,18 @@ public class SoundControl extends AppCompatActivity {
         });
     }
     // hooray sound
+    public void hooraySoundFun2(Context context)
+    {
+        hooray= MediaPlayer.create(context,R.raw.hooray);
+        hooray.start();
+        hooray.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
+    // hooray sound
     public void hooraySoundFun(Activity main)
     {
         hooray= MediaPlayer.create(main,R.raw.hooray);
@@ -265,6 +290,17 @@ public class SoundControl extends AppCompatActivity {
     public void sailingSoundFunc(Context context)
     {
         fall= MediaPlayer.create(context,R.raw.ship_sailing_sound);
+        fall.start();
+        fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
+    public void fishingSoundFunc(Context context)
+    {
+        fall= MediaPlayer.create(context,R.raw.fishing_sound);
         fall.start();
         fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override

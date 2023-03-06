@@ -15,11 +15,23 @@
         android:theme="@style/Theme.SmallGames"
         tools:targetApi="31">
         <activity
-            android:name=".part2.winning_activity.Winning_activity_golden_island"
+            android:name=".part2.winning_activity.Winning_activity_fishing_2"
             android:exported="false" android:screenOrientation="landscape" />
         <activity
-            android:name=".part2.game_rules.GoldIsland_rule"
+            android:name=".part2.game_acitivity.Fishing_2_Activity"
             android:exported="false" android:screenOrientation="landscape" />
+        <activity
+            android:name=".part2.game_rules.Fishing_2_rule"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".part2.winning_activity.Winning_activity_golden_island"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".part2.game_rules.GoldIsland_rule"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".part2.game_acitivity.GoldIslandActivity"
             android:exported="false"
