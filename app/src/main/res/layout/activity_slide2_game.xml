@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Slide_game_main"
-    android:background="@drawable/gradient_background_game2">
+    >
 
     <TextView
         android:id="@+id/game2_name"
@@ -35,7 +35,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="15dp"
         android:clickable="false"
-        android:src="@drawable/game2_pic"
+        android:src="@drawable/game3_main"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.68"
@@ -550,7 +550,48 @@
         app:layout_constraintTop_toBottomOf="@+id/dice_game2"
         app:layout_constraintVertical_bias="0.181"
         app:layout_constraintWidth_percent="0.15" />
-
+    <Button
+        android:visibility="gone"
+        android:id="@+id/upMove"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounded_move_button"
+        android:padding="10dp"
+        android:text="Leo lên"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintStart_toEndOf="@+id/textInput"
+        app:layout_constraintTop_toBottomOf="@+id/dice_game2"
+        app:layout_constraintVertical_bias="0.181"
+        app:layout_constraintWidth_percent="0.15" />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/downMove"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounded_move_button"
+        android:padding="2dp"
+        android:text="Trượt xuống"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintStart_toEndOf="@+id/textInput"
+        app:layout_constraintTop_toBottomOf="@+id/dice_game2"
+        app:layout_constraintVertical_bias="0.181"
+        app:layout_constraintWidth_percent="0.15" />
     <ImageButton
         android:id="@+id/SonoffBut_game2"
         android:layout_width="0dp"
