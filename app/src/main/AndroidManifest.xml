@@ -15,6 +15,15 @@
         android:theme="@style/Theme.SmallGames"
         tools:targetApi="31">
         <activity
+            android:name=".part2.winning_activity.Winning_activity_toy_machine"
+            android:exported="false" android:screenOrientation="landscape" />
+        <activity
+            android:name=".part2.game_acitivity.Toy_Machine_Activity"
+            android:exported="false" android:screenOrientation="landscape" />
+        <activity
+            android:name=".part2.game_rules.Toy_Machine_rule"
+            android:exported="false" android:screenOrientation="landscape" />
+        <activity
             android:name=".part2.winning_activity.Winning_activity_slide_2"
             android:exported="false" android:screenOrientation="landscape" />
         <activity
