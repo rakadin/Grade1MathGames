@@ -58,4 +58,12 @@ public class Gif_PopUp_Controller {
         gifphy.setImageResource(R.drawable.mario_win_gif);// insert gif need
         dialog.show();
     }
+    public void show_claw_machine(Dialog dialog)
+    {
+        dialog.setContentView(R.layout.pop_up_layout_gif);
+        GifImageView gifphy ;
+        gifphy = dialog.findViewById(R.id.gif_inset);
+        gifphy.setImageResource(R.drawable.claw_machine_gif);// insert gif need
+        dialog.show();
+    }
 }

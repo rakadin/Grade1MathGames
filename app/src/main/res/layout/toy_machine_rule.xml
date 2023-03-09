@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Slide_introduction"
-    android:background="@drawable/gradient_background_game2">
-
+    android:background="@drawable/gradient_card_game"
+    tools:context=".part2.game_rules.Fishing_2_rule">
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:autoSizeTextType="uniform"
-        android:text="Luật chơi Cầu thang - cầu trượt"
+        android:text="Luật chơi Lấy đồ chơi"
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -35,8 +34,9 @@
         android:layout_marginEnd="75dp"
         android:autoSizeTextType="uniform"
         android:text="- Chơi theo nhóm.
-\n- Người chơi bắt đầu từ ô xuất phát. Khi đến lượt, người chơi gieo xúc xắc. Đếm số chấm ở mặt trên xúc xắc rồi chọn nút 'Di chuyển' giúp mario di chuyển số ô bằng số chấm nhận được. Chọn số bé hơn trong ô đó. Khi đến cầu thang, em chọn 'leo lên'. Khi đến cầu trượt, em 'trượt xuống'.
-\n- Trò chơi kết thúc khi có người về đến đích gặp công chúa ."
+\n- Khi đến lượt, người chơi gieo xúc xắc. Đếm số chấm nhận được ở mặt trên xúc xắc rồi chọn nút 'Nhập phép tính' để hiển thị phép tính. Tính kết quả của phép tính hiển thị trên màn hình. Lấy các đồ chơi ghi số bằng kết quả phép tính đó.
+\n- Trò chơi kết thúc khi lấy được 6 đồ chơi"
+        android:padding="7dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,35 +46,34 @@
         app:layout_constraintVertical_bias="0.195"
         app:layout_constraintWidth_percent="0.8" />
 
-
     <Button
-        android:autoSizeTextType="uniform"
-        android:id="@+id/nextBut2"
+        android:id="@+id/nextBut"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
+        android:autoSizeTextType="uniform"
         android:background="@drawable/rounded_game_button"
+        android:padding="5dp"
         android:text="Đã hiểu!"
         android:textColor="@color/black"
-        android:padding="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.404"
+        app:layout_constraintVertical_bias="0.6"
         app:layout_constraintWidth_percent="0.2" />
 
     <ImageButton
         android:background="@null"
-        android:id="@+id/SonoffBut2"
+        android:id="@+id/SonoffBut"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="fitCenter"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintWidth_percent="0.07"
+        app:layout_constraintHeight_percent="0.14"
+        app:layout_constraintWidth_percent="0.09"
         android:src="@drawable/sound_on"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

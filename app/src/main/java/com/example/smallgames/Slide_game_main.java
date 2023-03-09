@@ -1,5 +1,6 @@
 package com.example.smallgames;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.smallgames.part2.Part2_Homepage_Activity;
+import com.example.smallgames.part2.game_acitivity.Slide_game_2_activity;
+import com.example.smallgames.part2.game_controller.Gif_PopUp_Controller;
+import com.example.smallgames.part2.game_controller.Slide_game2_controller;
+import com.example.smallgames.part2.winning_activity.Winning_activity_slide_2;
+
 /*
  slide game main activity class
  */
@@ -19,10 +26,11 @@ public class Slide_game_main extends AppCompatActivity {
     Slide_game_control control = new Slide_game_control();
     int temmove =0;
     int diceNumFinal = 0;
+    int now_loc =0, previous_loc =0;
     ImageButton onoffBut;
     ImageButton diceBut;
     SoundControl soundControl = new SoundControl();
-    Button moveBut;
+    Button moveBut,upBut,downBut;
     // image character
     ImageView img1;
     ImageView img2;
@@ -54,20 +62,19 @@ public class Slide_game_main extends AppCompatActivity {
     ImageView img28;
     ImageView img29;
     ImageView img30;
-        // each move have 2 variables left and right
-    int tableRight[] = {1,1,6,8,5,4,6,3,5,3,10,2,5,1,9,9,10,9,7,4,8,3,1,10,6,1,8,4};
-    int tableLeft[] = {0,3,2,3,2,1,0,4,8,9,3,5,3,8,10,6,8,3,9,7,5,8,5,6,5,2,9,2};
+
     //create counting move
     int move = 0;
     TextView question;
     TextView txtInput;
-
+    Gif_PopUp_Controller gif_popUp_controller = new Gif_PopUp_Controller();
     ImageButton homebut;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide_game_main);
+        Dialog dialog = new Dialog(this);
         getSupportActionBar().hide();
         onoffBut = findViewById(R.id.SonoffBut_game2);
         diceBut = findViewById(R.id.dice_game2);
@@ -76,12 +83,10 @@ public class Slide_game_main extends AppCompatActivity {
         txtInput = findViewById(R.id.textInput);
         //get id move charaacter
         moveBut = findViewById(R.id.startMove);
+        upBut = findViewById(R.id.upMove);
+        downBut = findViewById(R.id.downMove);
         //animation set
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.animation_to_left);
         Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.animation_to_right);
-        Animation animation3 = AnimationUtils.loadAnimation(this, R.anim.animation_go_up_left);
-        Animation animation4 = AnimationUtils.loadAnimation(this, R.anim.anim_go_up_left_2);
-        Animation animation5 = AnimationUtils.loadAnimation(this, R.anim.anim_down_right);
         Animation bounce = AnimationUtils.loadAnimation(this, R.anim.bounce_animation);
         // get image view id for character
         img1 = findViewById(R.id.img1);
@@ -130,7 +135,6 @@ public class Slide_game_main extends AppCompatActivity {
                     Utils.delay(sec, () -> {
                         soundControl.RollSoundFun(Slide_game_main.this);
                         diceNumFinal = (int) (Math.random() * 6 + 1);
-//                        question.setText(" "+diceNumFinal);
                         diceBut.setImageResource(images[diceNumFinal-1]);
                         // release roll sound
                         soundControl.rollSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -155,246 +159,54 @@ public class Slide_game_main extends AppCompatActivity {
         moveBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                previous_loc = temmove;
                 temmove = temmove + diceNumFinal;
-//                txtInput.setText(" "+temmove);
+                now_loc = temmove;
                 if(temmove > 29)
                 {
-                    temmove -= diceNumFinal;
-                    move -= diceNumFinal;
+                    temmove = previous_loc;
+                    previous_loc = temmove;
                 }
-                if(temmove == 29)
+                else if(temmove == 29) // wwin the game
                 {
-
-                    table[temmove-diceNumFinal].setImageResource(0);
+                    table[previous_loc].setImageResource(0);
                     table[temmove].setImageResource(R.drawable.mario2);
                     table[temmove].startAnimation(animation2);
-                    Utils.delay(4, () -> {
+                    Utils.delay(10, () -> {
                         table[temmove].setImageResource(R.drawable.mario);
                         table[temmove].startAnimation(bounce);
                         soundControl.hooraySoundFun(Slide_game_main.this);
                     });
-                    Utils.delay(50, () -> {
+                    Utils.delay(40, () -> {
+                        gif_popUp_controller.show_mario_win(dialog);
+                        soundControl.upSoundFun(Slide_game_main.this);
+                    });
+                    Utils.delay(110, () -> {
                         Intent intent = new Intent();
                         intent.setClass(Slide_game_main.this, Winning_activity_Slide.class);
                         startActivity(intent);
                     });
 
                 }
-                else if( temmove <29 && temmove >0 )
+                else if( ( temmove <29 && temmove >=0 ) && ( previous_loc <29 && previous_loc >=0 ) )// on controll move field
                 {
-                    table[0].setImageResource(0);
-                    for (int i = move+1;i<=temmove+1;i++)
+                    control.getNum(question,txtInput,now_loc,previous_loc,table,view.getContext(),Slide_game_main.this);
+                    control.checkAns(question,txtInput,now_loc,Slide_game_main.this,view.getContext());
+                    if(temmove == 3 || temmove == 12)// activate go up but and moveBut disable
                     {
-                        //case 1
-                        if( (i>=1 && i<=5) || (i>=11 && i<=15) ||(i>=21 && i<=25))
-                        {
-                            table[i-1].setImageResource(0); // important bcs delete all old move pic
-                            table[3].setImageResource(0);//delete pic from previous lader move
-                            table[12].setImageResource(0);//delete pic from previous lader move
-                            table[14].setImageResource(0);//delete pic from previous lader move
-                            table[23].setImageResource(0);//delete pic from previous lader move
-                            table[18].setImageResource(0);//delete pic from previous slide move
-                            table[9].setImageResource(0);//delete pic from previous slide move
-                            table[27].setImageResource(0);//delete pic from previous slide move
-                            table[16].setImageResource(0);//delete pic from previous slide move
-                            if(i==temmove+1)
-                            {
-
-                                int previousmove = i -2;
-//                                // release fall sound
-//                                soundControl.run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-//                                    @Override
-//                                    public void onCompletion(MediaPlayer mediaPlayer) {
-//                                        mediaPlayer.release();
-//                                    }
-//                                });
-                                // when character go to lader -> go up
-                                if(temmove==3)
-                                {
-                                    soundControl.runSoundFun(Slide_game_main.this);
-                                    table[i-1].setImageResource(R.drawable.mario);
-                                    table[i-1].startAnimation(animation);
-                                    table[i-2].setImageResource(0);
-//                                    table[i-1].startAnimation(animation4);
-                                    temmove +=11;
-                                    move+=(10);
-                                    int sec = 6;
-                                    int finalTemmove = temmove;
-                                    Utils.delay(sec, () -> {
-                                        table[previousmove+1].setImageResource(0);
-                                        table[previousmove].setImageResource(0);
-                                        soundControl.upSoundFun(Slide_game_main.this);
-                                        table[finalTemmove].setImageResource(R.drawable.mario);
-                                        table[finalTemmove].startAnimation(animation3);
-                                        // check clicking ans
-                                        control.checkAns(question,txtInput,temmove,tableRight,tableLeft,Slide_game_main.this,view.getContext());
-                                        // release up sound
-                                        soundControl.up.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                            @Override
-                                            public void onCompletion(MediaPlayer mediaPlayer) {
-                                                mediaPlayer.release();
-                                            }
-                                        });
-                                    });
-
-                                }
-                                if(temmove==12)
-                                {
-                                    soundControl.runSoundFun(Slide_game_main.this);
-                                    table[i-1].setImageResource(R.drawable.mario);
-                                    table[i-1].startAnimation(animation);
-                                    table[i-2].setImageResource(0);
-//                                    table[i-1].startAnimation(animation4);
-                                    temmove+=11;
-                                    move+=(11);
-                                    int sec = 6;
-                                    int finalTemmove = temmove;
-                                    Utils.delay(sec, () -> {
-                                        table[previousmove+1].setImageResource(0);
-                                        table[previousmove].setImageResource(0);
-                                        soundControl.upSoundFun(Slide_game_main.this);
-                                        table[finalTemmove].setImageResource(R.drawable.mario);
-                                        table[finalTemmove].startAnimation(animation3);
-                                        // check ans
-                                        control.checkAns(question,txtInput,temmove,tableRight,tableLeft,Slide_game_main.this,view.getContext());
-                                        // release up sound
-                                        soundControl.up.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                            @Override
-                                            public void onCompletion(MediaPlayer mediaPlayer) {
-                                                mediaPlayer.release();
-                                            }
-                                        });
-                                    });
-
-                                }
-                                else
-                                {
-                                    soundControl.runSoundFun(Slide_game_main.this);
-                                    table[i-1].startAnimation(animation);
-                                    table[i-1].setImageResource(R.drawable.mario);
-                                    if(move > 3)
-                                    {
-                                        table[move-1].setImageResource(0); // important bcs delete all old move pic
-                                        table[move-2].setImageResource(0);
-                                        table[move-3].setImageResource(0);
-                                    }
-
-                                    table[i-2].setImageResource(0); // important bcs delete all old move pic
-                                    move+=diceNumFinal;
-                                    control.checkAns(question,txtInput,temmove,tableRight,tableLeft,Slide_game_main.this,view.getContext());
-                                    // release run sound
-                                    soundControl.run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                        @Override
-                                        public void onCompletion(MediaPlayer mediaPlayer) {
-                                            mediaPlayer.release();
-                                        }
-                                    });
-                                }
-                            }
-
-                        }
-                        // case2
-                        else if( (i>=6 && i<=10) || (i>=16 && i<=20) ||(i>=25 && i<=30))
-                        {
-                            table[i-1].setImageResource(0); // important bcs delete all old move pic
-                            table[3].setImageResource(0);//delete pic from previous lader move
-                            table[12].setImageResource(0);//delete pic from previous lader move
-                            table[14].setImageResource(0);//delete pic from previous lader move
-                            table[23].setImageResource(0);//delete pic from previous lader move
-                            table[18].setImageResource(0);//delete pic from previous slide move
-                            table[9].setImageResource(0);//delete pic from previous slide move
-                            table[27].setImageResource(0);//delete pic from previous slide move
-                            table[16].setImageResource(0);//delete pic from previous slide move
-                            if(i==temmove+1){
-                                int previousmove = i-2;
-                                // when character go to slide -> go down
-                                if(temmove==18)
-                                {
-                                    soundControl.runSoundFun(Slide_game_main.this);
-                                    table[i-1].setImageResource(R.drawable.mario2);
-                                    table[i-1].startAnimation(animation4);
-                                    table[i-2].setImageResource(0);
-//                                    table[i-1].startAnimation(animation4);
-                                    temmove -=9;
-                                    move-=(9);
-                                    int sec = 4;
-                                    int finalTemmove = temmove;
-                                    Utils.delay(sec, () -> {
-                                        table[previousmove+1].setImageResource(0);
-                                        table[previousmove].setImageResource(0);
-                                        soundControl.fallSoundFun(Slide_game_main.this);
-                                        table[finalTemmove].setImageResource(R.drawable.mario2);
-                                        table[finalTemmove].startAnimation(animation4);
-                                        // check answer
-                                        control.checkAns(question,txtInput,temmove,tableRight,tableLeft,Slide_game_main.this,view.getContext());
-                                        // release fall sound
-                                        soundControl.fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                            @Override
-                                            public void onCompletion(MediaPlayer mediaPlayer) {
-                                                mediaPlayer.release();
-                                            }
-                                        });
-                                    });
-
-                                }
-                                if(temmove==27)
-                                {
-                                    soundControl.runSoundFun(Slide_game_main.this);
-                                    table[i-1].setImageResource(R.drawable.mario2);
-                                    table[i-1].startAnimation(animation4);
-                                    table[i-2].setImageResource(0);
-//                                    table[i-1].startAnimation(animation4);
-                                    temmove -=11;
-                                    move-=(11);
-                                    int sec = 4;
-                                    int finalTemmove = temmove;
-                                    Utils.delay(sec, () -> {
-                                        table[previousmove+1].setImageResource(0);
-                                        table[previousmove].setImageResource(0);
-                                        soundControl.fallSoundFun(Slide_game_main.this);
-                                        table[finalTemmove].setImageResource(R.drawable.mario);
-                                        table[finalTemmove].startAnimation(animation5);
-                                        // check answer
-                                        control.checkAns(question,txtInput,temmove,tableRight,tableLeft,Slide_game_main.this,view.getContext());
-                                        // release fall sound
-                                        soundControl.fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                            @Override
-                                            public void onCompletion(MediaPlayer mediaPlayer) {
-                                                mediaPlayer.release();
-                                            }
-                                        });
-                                    });
-
-                                }
-                                else
-                                {
-                                    soundControl.runSoundFun(Slide_game_main.this);
-                                    table[i-1].startAnimation(animation2);
-                                    table[i-1].setImageResource(R.drawable.mario2);
-                                    table[i-2].setImageResource(0);
-                                    if(move >3)
-                                    {
-                                        table[move-1].setImageResource(0); // important bcs delete all old move pic
-                                        table[move-2].setImageResource(0);
-                                        table[move-3].setImageResource(0);
-                                    }
-                                    move+=diceNumFinal;
-                                    // check answer
-                                    control.checkAns(question,txtInput,temmove,tableRight,tableLeft,Slide_game_main.this,view.getContext());
-                                    // release fall sound
-                                    soundControl.run.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                        @Override
-                                        public void onCompletion(MediaPlayer mediaPlayer) {
-                                            mediaPlayer.release();
-                                        }
-                                    });
-                                }
-                            }
-                        }
-
+                        moveBut.setVisibility(View.GONE);
+                        upBut.setVisibility(View.VISIBLE);
+                        downBut.setVisibility(View.GONE);
+                        goUP(table);
+                    }
+                    else if(temmove == 18 || temmove == 27)// active go down by the slider
+                    {
+                        moveBut.setVisibility(View.GONE);
+                        upBut.setVisibility(View.GONE);
+                        downBut.setVisibility(View.VISIBLE);
+                        goDOWN(table);
                     }
                 }
-
             }
         });
         /*
@@ -413,7 +225,66 @@ public class Slide_game_main extends AppCompatActivity {
         });
         // end controll sound but
     }
-
+    void goUP(ImageView table[])
+    {
+        upBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(temmove == 3)//location to go up
+                {
+                    previous_loc = temmove;
+                    temmove = 14;
+                    now_loc = temmove;
+                    control.getNum(question,txtInput,now_loc,previous_loc,table,view.getContext(),Slide_game_main.this);
+                    control.checkAns(question,txtInput,now_loc,Slide_game_main.this,view.getContext());
+                    moveBut.setVisibility(View.VISIBLE);
+                    upBut.setVisibility(View.GONE);
+                    downBut.setVisibility(View.GONE);
+                }
+                if(temmove == 12)
+                {
+                    previous_loc = temmove;
+                    temmove = 23;
+                    now_loc = temmove;
+                    control.getNum(question,txtInput,now_loc,previous_loc,table,view.getContext(),Slide_game_main.this);
+                    control.checkAns(question,txtInput,now_loc,Slide_game_main.this,view.getContext());
+                    moveBut.setVisibility(View.VISIBLE);
+                    upBut.setVisibility(View.GONE);
+                    downBut.setVisibility(View.GONE);
+                }
+            }
+        });
+    }
+    void goDOWN(ImageView table[])
+    {
+        downBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(temmove == 27)
+                {
+                    previous_loc = temmove;
+                    temmove = 16;
+                    now_loc = temmove;
+                    control.getNum(question,txtInput,now_loc,previous_loc,table,view.getContext(),Slide_game_main.this);
+                    control.checkAns(question,txtInput,now_loc,Slide_game_main.this,view.getContext());
+                    moveBut.setVisibility(View.VISIBLE);
+                    upBut.setVisibility(View.GONE);
+                    downBut.setVisibility(View.GONE);
+                }
+                if(temmove == 18)
+                {
+                    previous_loc = temmove;
+                    temmove = 9;
+                    now_loc = temmove;
+                    control.getNum(question,txtInput,now_loc,previous_loc,table,view.getContext(),Slide_game_main.this);
+                    control.checkAns(question,txtInput,now_loc,Slide_game_main.this,view.getContext());
+                    moveBut.setVisibility(View.VISIBLE);
+                    upBut.setVisibility(View.GONE);
+                    downBut.setVisibility(View.GONE);
+                }
+            }
+        });
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();

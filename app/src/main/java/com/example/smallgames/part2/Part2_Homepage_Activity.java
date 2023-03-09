@@ -15,6 +15,7 @@ import com.example.smallgames.SoundControl;
 import com.example.smallgames.part2.game_rules.Fishing_2_rule;
 import com.example.smallgames.part2.game_rules.GoldIsland_rule;
 import com.example.smallgames.part2.game_rules.Slide_2_rule;
+import com.example.smallgames.part2.game_rules.Toy_Machine_rule;
 
 public class Part2_Homepage_Activity extends AppCompatActivity {
     SoundControl soundControl = new SoundControl();
@@ -65,6 +66,14 @@ public class Part2_Homepage_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.setClass(view.getContext(), Slide_2_rule.class);
+                startActivity(intent);
+            }
+        });
+        gettoy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(view.getContext(), Toy_Machine_rule.class);
                 startActivity(intent);
             }
         });
