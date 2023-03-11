@@ -10,6 +10,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 /*
 fishing game main activity
  */
@@ -161,40 +163,42 @@ public class Fishing_game_main extends AppCompatActivity {
             fishs[tem].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int ans = variable1[diceValueB-1] - variable2[diceValueA-1];
-                    if(ans == GET_variable[tem])
-                    {
-                        gets[fishSum].setImageResource(imgFish_id[tem]);
-                        fishs[tem].startAnimation(animation);
-                        soundControl.correctSoundFun(Fishing_game_main.this);
-                        fishSum++;
-                        if(fishSum == 5)
-                        {
-                            soundControl.hooraySoundFun(Fishing_game_main.this);
-                            Utils.delay(50, () -> {
-                                Intent intent = new Intent();
-                                intent.setClass(Fishing_game_main.this, Winning_activity_fish_catch.class);
-                                startActivity(intent);
-                            });
 
+                        int ans = variable1[diceValueB-1] - variable2[diceValueA-1];
+                        if(ans == GET_variable[tem])
+                        {
+                            gets[fishSum].setImageResource(imgFish_id[tem]);
+                            fishs[tem].startAnimation(animation);
+                            soundControl.correctSoundFun(Fishing_game_main.this);
+                            fishSum++;
+                            if(fishSum == 5)
+                            {
+                                soundControl.hooraySoundFun(Fishing_game_main.this);
+                                Utils.delay(50, () -> {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Fishing_game_main.this, Winning_activity_fish_catch.class);
+                                    startActivity(intent);
+                                });
+
+                            }
+                            soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                @Override
+                                public void onCompletion(MediaPlayer mediaPlayer) {
+                                    mediaPlayer.release();
+                                }
+                            });
                         }
-                        soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                            @Override
-                            public void onCompletion(MediaPlayer mediaPlayer) {
-                                mediaPlayer.release();
-                            }
-                        });
-                    }
-                    else
-                    {
-                        soundControl.wrongSoundFun(Fishing_game_main.this);
-                        soundControl.wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                            @Override
-                            public void onCompletion(MediaPlayer mediaPlayer) {
-                                mediaPlayer.release();
-                            }
-                        });
-                    }
+                        else
+                        {
+                            soundControl.wrongSoundFun(Fishing_game_main.this);
+                            soundControl.wrong.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                @Override
+                                public void onCompletion(MediaPlayer mediaPlayer) {
+                                    mediaPlayer.release();
+                                }
+                            });
+                        }
+
                 }
             });
         }

@@ -65,38 +65,46 @@ public class Toy_Machine_Activity extends AppCompatActivity {
             toys[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    gif_popUp_controller.show_claw_machine(dialog);
-                    Utils.delay(60, () -> {
-                        dialog.dismiss();
-                        boolean tem = controller.checkAns(ans,temi);
-                        if(tem == true)
-                        {
-                            gif_popUp_controller.show_yes_penguin(dialog);
-                            count ++;
-                            soundControl.correctSoundFun(Toy_Machine_Activity.this);
-                            toys2[temi].setImageResource(xsign);
-                            toys2[temi].setClickable(false);
-                            Utils.delay(50, () -> {
-                                dialog.dismiss();
-                            });
-                            if(count == 6)//get 6 toys -> win
+                    if(diceNumFinal ==0)// make sure roll the dice first
+                    {
+                        Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                    }
+                    else
+                    {
+                        gif_popUp_controller.show_claw_machine(dialog);
+                        Utils.delay(60, () -> {
+                            dialog.dismiss();
+                            boolean tem = controller.checkAns(ans,temi);
+                            if(tem == true)
                             {
                                 gif_popUp_controller.show_yes_penguin(dialog);
-                                soundControl.hooraySoundFun(Toy_Machine_Activity.this);
+                                count ++;
+                                soundControl.correctSoundFun(Toy_Machine_Activity.this);
+                                toys2[temi].setImageResource(xsign);
+                                toys2[temi].setClickable(false);
                                 Utils.delay(50, () -> {
-                                    winner();
+                                    dialog.dismiss();
+                                });
+                                if(count == 6)//get 6 toys -> win
+                                {
+                                    gif_popUp_controller.show_yes_penguin(dialog);
+                                    soundControl.hooraySoundFun(Toy_Machine_Activity.this);
+                                    Utils.delay(50, () -> {
+                                        winner();
+                                    });
+                                }
+                            }
+                            else
+                            {
+                                gif_popUp_controller.show_no_penguin(dialog);
+                                soundControl.wrongSoundFun(Toy_Machine_Activity.this);
+                                Utils.delay(50, () -> {
+                                    dialog.dismiss();
                                 });
                             }
-                        }
-                        else
-                        {
-                            gif_popUp_controller.show_no_penguin(dialog);
-                            soundControl.wrongSoundFun(Toy_Machine_Activity.this);
-                            Utils.delay(50, () -> {
-                                dialog.dismiss();
-                            });
-                        }
-                    });
+                        });
+                    }
+
 
                 }
             });
@@ -134,8 +142,16 @@ public class Toy_Machine_Activity extends AppCompatActivity {
         mathBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                question.setText("49-"+diceNumFinal);
-                ans = 49-diceNumFinal;
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    question.setText("49-"+diceNumFinal);
+                    ans = 49-diceNumFinal;
+                }
+
             }
         });
     }

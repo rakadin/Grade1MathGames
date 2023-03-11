@@ -14,6 +14,7 @@ import com.example.smallgames.R;
 import com.example.smallgames.SoundControl;
 import com.example.smallgames.part2.game_rules.Fishing_2_rule;
 import com.example.smallgames.part2.game_rules.GoldIsland_rule;
+import com.example.smallgames.part2.game_rules.Mushroom_rule;
 import com.example.smallgames.part2.game_rules.Slide_2_rule;
 import com.example.smallgames.part2.game_rules.Toy_Machine_rule;
 
@@ -31,7 +32,7 @@ public class Part2_Homepage_Activity extends AppCompatActivity {
         goldisland = findViewById(R.id.goldisland);
         fishing = findViewById(R.id.fishing);
         ladder_slide = findViewById(R.id.ladder_slide);
-        mushroom = findViewById(R.id.ladder_slide);
+        mushroom = findViewById(R.id.mushroom);
         gettoy = findViewById(R.id.gettoy);
         beehome = findViewById(R.id.beehome);
         bookBut = findViewById(R.id.bookBut);
@@ -74,6 +75,14 @@ public class Part2_Homepage_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.setClass(view.getContext(), Toy_Machine_rule.class);
+                startActivity(intent);
+            }
+        });
+        mushroom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(view.getContext(), Mushroom_rule.class);
                 startActivity(intent);
             }
         });
