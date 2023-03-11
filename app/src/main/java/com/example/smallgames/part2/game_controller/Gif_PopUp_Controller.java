@@ -66,4 +66,28 @@ public class Gif_PopUp_Controller {
         gifphy.setImageResource(R.drawable.claw_machine_gif);// insert gif need
         dialog.show();
     }
+    public void show_mushroom_picker(Dialog dialog)
+    {
+        dialog.setContentView(R.layout.pop_up_layout_gif);
+        GifImageView gifphy ;
+        gifphy = dialog.findViewById(R.id.gif_inset);
+        gifphy.setImageResource(R.drawable.mushroon_find_gif);// insert gif need
+        dialog.show();
+    }
+    public void show_mushroom_sad(Dialog dialog)
+    {
+        dialog.setContentView(R.layout.pop_up_layout_gif);
+        GifImageView gifphy ;
+        gifphy = dialog.findViewById(R.id.gif_inset);
+        gifphy.setImageResource(R.drawable.mushroom_sad_gif);// insert gif need
+        dialog.show();
+    }
+    public void show_mushroom_yeah(Dialog dialog)
+    {
+        dialog.setContentView(R.layout.pop_up_layout_gif);
+        GifImageView gifphy ;
+        gifphy = dialog.findViewById(R.id.gif_inset);
+        gifphy.setImageResource(R.drawable.mushroom_yeah_gif);// insert gif need
+        dialog.show();
+    }
 }

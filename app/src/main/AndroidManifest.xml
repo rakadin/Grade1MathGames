@@ -15,6 +15,15 @@
         android:theme="@style/Theme.SmallGames"
         tools:targetApi="31">
         <activity
+            android:name=".part2.winning_activity.Winning_activity_mushroom"
+            android:exported="false" android:screenOrientation="landscape" />
+        <activity
+            android:name=".part2.game_acitivity.Mushroom_Activity"
+            android:exported="false" android:screenOrientation="landscape" />
+        <activity
+            android:name=".part2.game_rules.Mushroom_rule"
+            android:exported="false" android:screenOrientation="landscape" />
+        <activity
             android:name=".part2.winning_activity.Winning_activity_toy_machine"
             android:exported="false" android:screenOrientation="landscape" />
         <activity

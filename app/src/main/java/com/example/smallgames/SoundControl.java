@@ -309,4 +309,15 @@ public class SoundControl extends AppCompatActivity {
             }
         });
     }
+    public void pianoSoundFunc(Context context)
+    {
+        fall= MediaPlayer.create(context,R.raw.piano);
+        fall.start();
+        fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
 }

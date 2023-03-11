@@ -14,6 +14,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.smallgames.R;
 import com.example.smallgames.Slide_game_main;
@@ -68,82 +69,90 @@ public class GoldIslandActivity extends AppCompatActivity {
         moveBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // switching location
-                int tempr = previous_loc;
-                int tem = now_loc;
-                previous_loc = tem;
-                now_loc = previous_loc+ diceNumFinal;
-                if(now_loc >39)// not increase > 39
+                if(diceNumFinal ==0)// make sure roll the dice first
                 {
-                    now_loc = now_loc - diceNumFinal;
-                    previous_loc = tempr;
-                    dialog.dismiss();
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    Animation animation3 = AnimationUtils.loadAnimation(view.getContext(), R.anim.ship_go_down_right);
-                    Animation animation4 = AnimationUtils.loadAnimation(view.getContext(), R.anim.ship_go_up_right);
-                    Animation animation5 = AnimationUtils.loadAnimation(view.getContext(), R.anim.ship_go_up_right_2);
-                    if(now_loc == 39)//go to island
+                    // switching location
+                    int tempr = previous_loc;
+                    int tem = now_loc;
+                    previous_loc = tem;
+                    now_loc = previous_loc+ diceNumFinal;
+                    if(now_loc >39)// not increase > 39
                     {
-
-                        Utils.delay(55, () -> {
-                            soundControl.hooraySoundFun(GoldIslandActivity.this);
-                            gif_popUp_controller.show_gold_chest(dialog);
-                        });
-                        Utils.delay(125, () -> {
-                            dialog.dismiss();
-                           Intent intent = new Intent();
-                           intent.setClass(view.getContext(), Winning_activity_golden_island.class);
-                           startActivity(intent);
-                        });
-
+                        now_loc = now_loc - diceNumFinal;
+                        previous_loc = tempr;
+                        dialog.dismiss();
                     }
-                    if(now_loc == 5)
+                    else
                     {
-                        now_loc = 13;
-                        Utils.delay(55, () -> {
-                            multiShip[now_loc-1].setAnimation(animation4);
-                        });
-
-                    }
-                    if(now_loc == 16)
-                    {
-                        now_loc = 27;
-                        Utils.delay(55, () -> {
-                            multiShip[now_loc-1].setAnimation(animation5);
-                        });
-                    }
-                    if(now_loc == 19)
-                    {
-                        now_loc = 3;
-                        Utils.delay(55, () -> {
-                            multiShip[now_loc-1].setAnimation(animation3);
-                        });
-                    }
-                    if(now_loc == 25)
-                    {
-                        now_loc = 36;
-                        Utils.delay(55, () -> {
-                            multiShip[now_loc-1].setAnimation(animation4);
-                        });
-                    }
-                    soundControl.sailingSoundFunc(view.getContext());
-                    gif_popUp_controller.show_ship_sailing(dialog);
-                    Utils.delay(55, () -> {
-                        soundControl.fall.release();
-                        if(now_loc <39)
-                        { // dismiss dialog after few secs when location <39
-                            dialog.dismiss();
-                        }
-                        multiShip[now_loc-1].setBackgroundResource(R.drawable.pirate_ship);
-                        goldIsland_controller.show_num(num_now,now_loc+1);//show location number
-                        if(previous_loc>0)
+                        Animation animation3 = AnimationUtils.loadAnimation(view.getContext(), R.anim.ship_go_down_right);
+                        Animation animation4 = AnimationUtils.loadAnimation(view.getContext(), R.anim.ship_go_up_right);
+                        Animation animation5 = AnimationUtils.loadAnimation(view.getContext(), R.anim.ship_go_up_right_2);
+                        if(now_loc == 39)//go to island
                         {
-                            multiShip[previous_loc-1].setBackgroundResource(0);
+
+                            Utils.delay(55, () -> {
+                                soundControl.hooraySoundFun(GoldIslandActivity.this);
+                                gif_popUp_controller.show_gold_chest(dialog);
+                            });
+                            Utils.delay(125, () -> {
+                                dialog.dismiss();
+                                Intent intent = new Intent();
+                                intent.setClass(view.getContext(), Winning_activity_golden_island.class);
+                                startActivity(intent);
+                            });
+
                         }
-                    });
+                        if(now_loc == 5)
+                        {
+                            now_loc = 13;
+                            Utils.delay(55, () -> {
+                                multiShip[now_loc-1].setAnimation(animation4);
+                            });
+
+                        }
+                        if(now_loc == 16)
+                        {
+                            now_loc = 27;
+                            Utils.delay(55, () -> {
+                                multiShip[now_loc-1].setAnimation(animation5);
+                            });
+                        }
+                        if(now_loc == 19)
+                        {
+                            now_loc = 3;
+                            Utils.delay(55, () -> {
+                                multiShip[now_loc-1].setAnimation(animation3);
+                            });
+                        }
+                        if(now_loc == 25)
+                        {
+                            now_loc = 36;
+                            Utils.delay(55, () -> {
+                                multiShip[now_loc-1].setAnimation(animation4);
+                            });
+                        }
+                        soundControl.sailingSoundFunc(view.getContext());
+                        gif_popUp_controller.show_ship_sailing(dialog);
+                        Utils.delay(55, () -> {
+                            soundControl.fall.release();
+                            if(now_loc <39)
+                            { // dismiss dialog after few secs when location <39
+                                dialog.dismiss();
+                            }
+                            multiShip[now_loc-1].setBackgroundResource(R.drawable.pirate_ship);
+                            goldIsland_controller.show_num(num_now,now_loc+1);//show location number
+                            if(previous_loc>0)
+                            {
+                                multiShip[previous_loc-1].setBackgroundResource(0);
+                            }
+                        });
+                    }
                 }
+
 
             }
         });

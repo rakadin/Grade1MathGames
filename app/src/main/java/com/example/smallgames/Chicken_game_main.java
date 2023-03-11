@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Chicken_game_main extends AppCompatActivity {
     Chicken_game_control controller = new Chicken_game_control();
@@ -156,25 +157,33 @@ public class Chicken_game_main extends AppCompatActivity {
         moveBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int previous = temmove;
-                if((temmove+diceNumFinal)==0)
+                if(diceNumFinal ==0)// make sure roll the dice first
                 {
-
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    if((temmove + diceNumFinal)>21)
+                    int previous = temmove;
+                    if((temmove+diceNumFinal)==0)
                     {
-                        temmove += diceNumFinal;
-                        temmove -= 21;
-                        controller.setString(questionT,temmove,moveButs,previous,Chicken_game_main.this,view.getContext());
+
                     }
                     else
                     {
-                        temmove += diceNumFinal;
-                        controller.setString(questionT,temmove,moveButs,previous,Chicken_game_main.this,view.getContext());
+                        if((temmove + diceNumFinal)>21)
+                        {
+                            temmove += diceNumFinal;
+                            temmove -= 21;
+                            controller.setString(questionT,temmove,moveButs,previous,Chicken_game_main.this,view.getContext());
+                        }
+                        else
+                        {
+                            temmove += diceNumFinal;
+                            controller.setString(questionT,temmove,moveButs,previous,Chicken_game_main.this,view.getContext());
+                        }
                     }
                 }
+
 
 
             }

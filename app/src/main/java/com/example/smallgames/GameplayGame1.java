@@ -36,6 +36,7 @@ public class GameplayGame1 extends AppCompatActivity {
                 {
                     soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
+                    butClick.setClickable(false);
                     imgEgg[countEggs].setImageResource(R.drawable.green_egg);
                     countEggs++;
                     soundControl.correct.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -62,6 +63,7 @@ public class GameplayGame1 extends AppCompatActivity {
                 {
                     soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
+                    butClick.setClickable(false);
                     if(temID == R.id.yellowEgg2)
                     {
                         imgEgg[countEggs].setImageResource(R.drawable.yellow_egg);
@@ -99,6 +101,7 @@ public class GameplayGame1 extends AppCompatActivity {
                 {
                     soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
+                    butClick.setClickable(false);
                     if(temID == R.id.purEgg2)
                     {
                         imgEgg[countEggs].setImageResource(R.drawable.purple_egg);
@@ -132,6 +135,7 @@ public class GameplayGame1 extends AppCompatActivity {
                 {
                     soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
+                    butClick.setClickable(false);
                     if(temID == R.id.yellowEgg1)
                     {
                         imgEgg[countEggs].setImageResource(R.drawable.yellow_egg);
@@ -165,6 +169,7 @@ public class GameplayGame1 extends AppCompatActivity {
                 {
                     soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
+                    butClick.setClickable(false);
                     if(temID == R.id.purEgg1)
                     {
                         imgEgg[countEggs].setImageResource(R.drawable.purple_egg);
@@ -198,6 +203,7 @@ public class GameplayGame1 extends AppCompatActivity {
                 {
                     soundControl.correctSoundFun(main);
                     butClick.setBackgroundResource(R.drawable.xsign);
+                    butClick.setClickable(false);
                     if(temID == R.id.blueEgg1)
                     {
                         imgEgg[countEggs].setImageResource(R.drawable.blue_egg);
@@ -227,31 +233,6 @@ public class GameplayGame1 extends AppCompatActivity {
             }
         }
 
-//        if(countEggs == 6)
-//        {
-//            Winningactivity winningactivity = new Winningactivity();
-//            soundControl.winSoundFun(main);
-//
-////
-//                AlertDialog.Builder alerDialog = new AlertDialog.Builder(main);
-//                alerDialog.setTitle("Thông báo!");
-//                alerDialog.setIcon(R.drawable.xsign);
-//                alerDialog.setMessage("Chúc mừng! Bạn đã chiến thắng");
-//                alerDialog.setPositiveButton("Chơi lại", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialogInterface, int i) {
-//
-//                    }
-//                });
-//                alerDialog.setNegativeButton("Trang chủ", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialogInterface, int i) {
-//
-//                    }
-//                });
-//
-//                alerDialog.show();
 
-//        }
     }
 }

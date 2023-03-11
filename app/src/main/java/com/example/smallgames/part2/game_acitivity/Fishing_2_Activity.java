@@ -70,7 +70,15 @@ public class Fishing_2_Activity extends AppCompatActivity {
             fishes[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    checkans(now_number,view.getContext(),tem,fishes,dialog);
+                    if(diceNumFinal ==0)// make sure roll the dice first
+                    {
+                        Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                    }
+                    else
+                    {
+                        checkans(now_number,view.getContext(),tem,fishes,dialog);
+                    }
+
                 }
             });
         }
@@ -189,20 +197,28 @@ public class Fishing_2_Activity extends AppCompatActivity {
         moveBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                previous =now_loc;
-                now_loc += diceNumFinal;
-                if(now_loc>15)
+                if(diceNumFinal ==0)// make sure roll the dice first
                 {
-                    now_loc -= 15;
-                    now_number = fishing_2_controller.getnum(ans,now_loc,previous,moves,view.getContext());
-
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    now_number = fishing_2_controller.getnum(ans,now_loc,previous,moves,view.getContext());
 
+                    previous =now_loc;
+                    now_loc += diceNumFinal;
+                    if(now_loc>15)
+                    {
+                        now_loc -= 15;
+                        now_number = fishing_2_controller.getnum(ans,now_loc,previous,moves,view.getContext());
+
+                    }
+                    else
+                    {
+                        now_number = fishing_2_controller.getnum(ans,now_loc,previous,moves,view.getContext());
+
+                    }
                 }
+
 
             }
         });

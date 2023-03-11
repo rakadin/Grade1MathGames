@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.ViewSwitcher;
 /*
       game 1 - eggs pick main activity
@@ -120,114 +121,242 @@ public class Game1MainActivity extends AppCompatActivity {
         grEgg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg1,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg1,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         grEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg2,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg2,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         grEgg3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg3,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg3,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         grEgg4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg4,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg4,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
 
             }
         });
         grEgg5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg5,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg5,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         grEgg6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg6,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg6,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         grEgg7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg7,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,grEgg7,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         redEgg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,redEgg1,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,redEgg1,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         redEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,redEgg2,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,redEgg2,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         redEgg3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,redEgg3,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,redEgg3,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         yellowEgg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,yellowEgg1,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,yellowEgg1,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         yellowEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,yellowEgg2,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,yellowEgg2,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         purEgg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,purEgg1,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,purEgg1,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         purEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,purEgg2,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,purEgg2,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         blueEgg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,blueEgg1,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,blueEgg1,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
         blueEgg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameplayGame1.gameOn(diceNumFinal,imgViews,blueEgg2,Game1MainActivity.this);
-                winAcOpen();
+                if(diceNumFinal ==0)// make sure roll the dice first
+                {
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    gameplayGame1.gameOn(diceNumFinal,imgViews,blueEgg2,Game1MainActivity.this);
+                    winAcOpen();
+                }
+
             }
         });
 

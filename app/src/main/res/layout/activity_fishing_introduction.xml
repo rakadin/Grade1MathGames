@@ -6,38 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".Fishing_introduction"
     android:background="@drawable/gradient_background_game3">
-    <ImageView
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
+        android:autoSizeTextType="uniform"
+        android:text="Luật chơi Câu cá"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_height="0dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="80dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/fish_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintHeight_percent="0.14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.084"
         app:layout_constraintWidth_percent="0.6" />
 
-    <ImageView
+    <TextView
         android:id="@+id/textView5"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="75dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/fish_introduction"
+        android:autoSizeTextType="uniform"
+        android:text="- Chơi theo nhóm.
+\n- Khi đến lượt, người chơi gieo 2 xúc xắc A và B để nhận được giá trị tương ứng. Lấy giá trị của B trừ đi A rồi bắt chú cá có kết quả bằng giá trị nhận được. Nếu kết quả đúng, bạn sẽ bắt được một chú cá vào bể
+\n- Trò chơi kết thúc khi hái được 5 chú cá"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintHeight_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.195"
         app:layout_constraintWidth_percent="0.8" />
 
     <Button

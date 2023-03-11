@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.smallgames.part2.Part2_Homepage_Activity;
 import com.example.smallgames.part2.game_acitivity.Slide_game_2_activity;
@@ -159,54 +160,62 @@ public class Slide_game_main extends AppCompatActivity {
         moveBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                previous_loc = temmove;
-                temmove = temmove + diceNumFinal;
-                now_loc = temmove;
-                if(temmove > 29)
+                if(diceNumFinal ==0)// make sure roll the dice first
                 {
-                    temmove = previous_loc;
+                    Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
                     previous_loc = temmove;
-                }
-                else if(temmove == 29) // wwin the game
-                {
-                    table[previous_loc].setImageResource(0);
-                    table[temmove].setImageResource(R.drawable.mario2);
-                    table[temmove].startAnimation(animation2);
-                    Utils.delay(10, () -> {
-                        table[temmove].setImageResource(R.drawable.mario);
-                        table[temmove].startAnimation(bounce);
-                        soundControl.hooraySoundFun(Slide_game_main.this);
-                    });
-                    Utils.delay(40, () -> {
-                        gif_popUp_controller.show_mario_win(dialog);
-                        soundControl.upSoundFun(Slide_game_main.this);
-                    });
-                    Utils.delay(110, () -> {
-                        Intent intent = new Intent();
-                        intent.setClass(Slide_game_main.this, Winning_activity_Slide.class);
-                        startActivity(intent);
-                    });
+                    temmove = temmove + diceNumFinal;
+                    now_loc = temmove;
+                    if(temmove > 29)
+                    {
+                        temmove = previous_loc;
+                        previous_loc = temmove;
+                    }
+                    else if(temmove == 29) // wwin the game
+                    {
+                        table[previous_loc].setImageResource(0);
+                        table[temmove].setImageResource(R.drawable.mario2);
+                        table[temmove].startAnimation(animation2);
+                        Utils.delay(10, () -> {
+                            table[temmove].setImageResource(R.drawable.mario);
+                            table[temmove].startAnimation(bounce);
+                            soundControl.hooraySoundFun(Slide_game_main.this);
+                        });
+                        Utils.delay(40, () -> {
+                            gif_popUp_controller.show_mario_win(dialog);
+                            soundControl.upSoundFun(Slide_game_main.this);
+                        });
+                        Utils.delay(110, () -> {
+                            Intent intent = new Intent();
+                            intent.setClass(Slide_game_main.this, Winning_activity_Slide.class);
+                            startActivity(intent);
+                        });
 
-                }
-                else if( ( temmove <29 && temmove >=0 ) && ( previous_loc <29 && previous_loc >=0 ) )// on controll move field
-                {
-                    control.getNum(question,txtInput,now_loc,previous_loc,table,view.getContext(),Slide_game_main.this);
-                    control.checkAns(question,txtInput,now_loc,Slide_game_main.this,view.getContext());
-                    if(temmove == 3 || temmove == 12)// activate go up but and moveBut disable
-                    {
-                        moveBut.setVisibility(View.GONE);
-                        upBut.setVisibility(View.VISIBLE);
-                        downBut.setVisibility(View.GONE);
-                        goUP(table);
                     }
-                    else if(temmove == 18 || temmove == 27)// active go down by the slider
+                    else if( ( temmove <29 && temmove >=0 ) && ( previous_loc <29 && previous_loc >=0 ) )// on controll move field
                     {
-                        moveBut.setVisibility(View.GONE);
-                        upBut.setVisibility(View.GONE);
-                        downBut.setVisibility(View.VISIBLE);
-                        goDOWN(table);
+                        control.getNum(question,txtInput,now_loc,previous_loc,table,view.getContext(),Slide_game_main.this);
+                        control.checkAns(question,txtInput,now_loc,Slide_game_main.this,view.getContext());
+                        if(temmove == 3 || temmove == 12)// activate go up but and moveBut disable
+                        {
+                            moveBut.setVisibility(View.GONE);
+                            upBut.setVisibility(View.VISIBLE);
+                            downBut.setVisibility(View.GONE);
+                            goUP(table);
+                        }
+                        else if(temmove == 18 || temmove == 27)// active go down by the slider
+                        {
+                            moveBut.setVisibility(View.GONE);
+                            upBut.setVisibility(View.GONE);
+                            downBut.setVisibility(View.VISIBLE);
+                            goDOWN(table);
+                        }
                     }
                 }
+
             }
         });
         /*
