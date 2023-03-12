@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 
 import com.example.smallgames.R;
 import com.example.smallgames.SoundControl;
+import com.example.smallgames.part2.game_rules.Bee_Home_rule;
 import com.example.smallgames.part2.game_rules.Fishing_2_rule;
 import com.example.smallgames.part2.game_rules.GoldIsland_rule;
 import com.example.smallgames.part2.game_rules.Mushroom_rule;
@@ -83,6 +84,14 @@ public class Part2_Homepage_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.setClass(view.getContext(), Mushroom_rule.class);
+                startActivity(intent);
+            }
+        });
+        beehome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(view.getContext(), Bee_Home_rule.class);
                 startActivity(intent);
             }
         });

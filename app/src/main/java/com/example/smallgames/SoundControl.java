@@ -320,4 +320,26 @@ public class SoundControl extends AppCompatActivity {
             }
         });
     }
+    public void machineSoundFunc(Context context)
+    {
+        fall= MediaPlayer.create(context,R.raw.machine_startup);
+        fall.start();
+        fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
+    public void beeSoundFunc(Context context)
+    {
+        fall= MediaPlayer.create(context,R.raw.bee_noise);
+        fall.start();
+        fall.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.release();
+            }
+        });
+    }
 }
