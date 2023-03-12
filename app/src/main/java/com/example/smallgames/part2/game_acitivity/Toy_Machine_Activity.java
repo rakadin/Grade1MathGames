@@ -65,18 +65,21 @@ public class Toy_Machine_Activity extends AppCompatActivity {
             toys[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(diceNumFinal ==0)// make sure roll the dice first
+                    if(diceNumFinal ==0 || ans ==0)// make sure roll the dice first
                     {
-                        Toast.makeText(view.getContext(),"Bạn cần xúc xắc trước đã!",Toast.LENGTH_LONG).show();
+                        Toast.makeText(view.getContext(),"Bạn cần xúc xắc và nhập phép tính trước!",Toast.LENGTH_LONG).show();
                     }
                     else
                     {
+                        soundControl.machineSoundFunc(view.getContext());
                         gif_popUp_controller.show_claw_machine(dialog);
                         Utils.delay(60, () -> {
                             dialog.dismiss();
+                            soundControl.fall.release();
                             boolean tem = controller.checkAns(ans,temi);
                             if(tem == true)
                             {
+
                                 gif_popUp_controller.show_yes_penguin(dialog);
                                 count ++;
                                 soundControl.correctSoundFun(Toy_Machine_Activity.this);

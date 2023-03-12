@@ -90,4 +90,20 @@ public class Gif_PopUp_Controller {
         gifphy.setImageResource(R.drawable.mushroom_yeah_gif);// insert gif need
         dialog.show();
     }
+    public void show_bee_yeah(Dialog dialog)
+    {
+        dialog.setContentView(R.layout.pop_up_layout_gif);
+        GifImageView gifphy ;
+        gifphy = dialog.findViewById(R.id.gif_inset);
+        gifphy.setImageResource(R.drawable.bee_flying_gif);// insert gif need
+        dialog.show();
+    }
+    public void show_bee_home(Dialog dialog)
+    {
+        dialog.setContentView(R.layout.pop_up_layout_gif);
+        GifImageView gifphy ;
+        gifphy = dialog.findViewById(R.id.gif_inset);
+        gifphy.setImageResource(R.drawable.bee_home_gif);// insert gif need
+        dialog.show();
+    }
 }
